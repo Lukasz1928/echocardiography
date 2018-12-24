@@ -1,0 +1,8 @@
+language: java
+
+install: true
+
+jobs:
+  include:
+    - stage: "test"
+script: mvn clean test
