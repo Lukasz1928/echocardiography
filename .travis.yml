@@ -2,7 +2,7 @@ language: java
 
 install: true
 
-jobs:
-  include:
-    - stage: "test"
 script: mvn clean test
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
