@@ -1,5 +1,5 @@
 package heart.valve.leaflets;
 
-public enum LeafletsType {
+public interface LeafletsType {
 
 }

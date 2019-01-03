@@ -1,7 +1,8 @@
-package heart.valve;
+package heart.valve.valves;
 
 import lombok.Builder;
 
 @Builder
 public class MitralValve extends Valve {
+
 }
