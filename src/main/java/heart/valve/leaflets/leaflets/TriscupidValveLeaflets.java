@@ -1,5 +1,7 @@
 package heart.valve.leaflets.leaflets;
 
-public enum TriscupidValveLeaflets {
+import heart.valve.leaflets.LeafletsType;
+
+public enum TriscupidValveLeaflets implements LeafletsType {
     RIGHT, FIBROTIC, CALCIFIED
 }

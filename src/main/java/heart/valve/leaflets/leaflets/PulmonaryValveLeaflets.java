@@ -1,5 +1,7 @@
 package heart.valve.leaflets.leaflets;
 
-public enum PulmonaryValveLeaflets {
+import heart.valve.leaflets.LeafletsType;
+
+public enum PulmonaryValveLeaflets implements LeafletsType {
     RIGHT, THIKENED
 }
