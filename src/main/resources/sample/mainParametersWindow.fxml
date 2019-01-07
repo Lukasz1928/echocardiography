@@ -1,41 +1,268 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 
-<Pane prefHeight="1000" prefWidth="1000" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="sample.Controller">
-    <children>
-        <TabPane layoutX="37.0" layoutY="49.0" prefHeight="483.0" prefWidth="568.0" tabClosingPolicy="UNAVAILABLE">
-            <tabs>
-                <Tab text="Untitled Tab 1">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
-                    </content>
-                </Tab>
-                <Tab text="Untitled Tab 2">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
-                    </content>
-                </Tab>
-                <Tab text="Untitled Tab 3">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
-                    </content>
-                </Tab>
-                <Tab text="Untitled Tab 4">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
-                    </content>
-                </Tab>
-                <Tab text="Untitled Tab 5">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
-                    </content>
-                </Tab>
-            </tabs>
-        </TabPane>
-    </children>
-</Pane>
+<AnchorPane prefHeight="1000" prefWidth="1200" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <TabPane layoutX="25.0" layoutY="100.0" prefHeight="900" prefWidth="750" style="-fx-background-color: gray;" tabClosingPolicy="UNAVAILABLE">
+        <Tab text="General">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <ToolBar layoutX="25.0" layoutY="75.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="lewa komora" />
+                    <TextField prefWidth="100.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="120.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="pr kom" />
+                    <TextField prefWidth="100.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="165.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="przegroda" />
+                    <TextField prefWidth="100.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="210.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="sciana" />
+                    <TextField prefWidth="100.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="255.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="l przed" />
+                    <TextField prefWidth="100.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="300.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="p przed" />
+                    <TextField prefWidth="100.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="345.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="aorta" />
+                    <TextField prefWidth="100.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="390.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="pien" />
+                    <TextField prefWidth="100.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="435.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="EF" />
+                    <TextField prefWidth="100.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="480.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="E/A" />
+                    <TextField prefWidth="100.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="525.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="DT" />
+                    <TextField prefWidth="100.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="570.0" prefHeight="40.0" prefWidth="300.0">
+                    <Label text="osierdzie" />
+                    <ComboBox prefWidth="100.0" />
+                    <Label text="ilosc" />
+                    <TextField prefWidth="100.0" />
+                </ToolBar>
+            </AnchorPane>
+        </Tab>
+        <Tab text="Mitral">
+            <AnchorPane prefHeight="500.0" prefWidth="800.0">
+                <ToolBar layoutX="25.0" layoutY="25.0" prefHeight="40.0" prefWidth="638.0">
+                    <RadioButton prefWidth="200" text="Biological" />
+                    <RadioButton prefWidth="200" text="Native" />
+                    <RadioButton prefWidth="200" text="Artificial" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="75.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="Platki" />
+                    <ComboBox prefWidth="150.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="120.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="Fala" />
+                    <ComboBox prefWidth="150.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="165.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="Gradient" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="210.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="VC" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="255.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="RPISA" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="300.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="ERO" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+
+                <ToolBar layoutX="25.0" layoutY="345.0" prefHeight="40.0" prefWidth="700.0">
+                    <Label text="DVI" />
+                    <TextField prefWidth="100" />
+                    <Label text="VTIpr" />
+                    <TextField prefWidth="100" />
+                    <Label text="VTIlvot" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="390.0" prefHeight="40.0" prefWidth="700.0">
+                    <Label text="EOA" />
+                    <TextField prefWidth="100" />
+                    <Label text="VTIpr" />
+                    <TextField prefWidth="100" />
+                    <Label text="VTIlvot" />
+                    <TextField prefWidth="100" />
+                    <Label text="CSAlvot" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+
+                <ToolBar layoutX="25.0" layoutY="435.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="PHT" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="480.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="Vmax" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="525.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="MVA" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+
+            </AnchorPane>
+        </Tab>
+        <Tab text="Aortic">
+            <AnchorPane prefHeight="500.0" prefWidth="800.0">
+                <ToolBar layoutX="25.0" layoutY="25.0" prefHeight="40.0" prefWidth="638.0">
+                    <RadioButton prefWidth="200" text="Biological" />
+                    <RadioButton prefWidth="200" text="Native" />
+                    <RadioButton prefWidth="200" text="Artificial" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="75.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="Platki" />
+                    <ComboBox prefWidth="150.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="120.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="Fala" />
+                    <ComboBox prefWidth="150.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="165.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="Gradient" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="210.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="VC" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="255.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="IA/LVOT" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="300.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="PHT" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="345.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="RPISA" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="390.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="AVA" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="435.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="Vmax" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+
+                <ToolBar layoutX="25.0" layoutY="480.0" prefHeight="40.0" prefWidth="700.0">
+                    <Label text="DVI" />
+                    <TextField prefWidth="100" />
+                    <Label text="VmaxLVOT" />
+                    <TextField prefWidth="100" />
+                    <Label text="VmaxPR" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="525.0" prefHeight="40.0" prefWidth="700.0">
+                    <Label text="EOA" />
+                    <TextField prefWidth="100" />
+                    <Label text="CSAlvot" />
+                    <TextField prefWidth="100" />
+                    <Label text="VTIlvot" />
+                    <TextField prefWidth="100" />
+                    <Label text="CSApr" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+
+                <ToolBar layoutX="25.0" layoutY="570.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="AT" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+            </AnchorPane>
+        </Tab>
+        <Tab text="Triscupid">
+            <AnchorPane prefHeight="500.0" prefWidth="800.0">
+                <ToolBar layoutX="25.0" layoutY="25.0" prefHeight="40.0" prefWidth="638.0">
+                    <RadioButton prefWidth="200" text="Biological" />
+                    <RadioButton prefWidth="200" text="Native" />
+                    <RadioButton prefWidth="200" text="Artificial" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="75.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="Platki" />
+                    <ComboBox prefWidth="150.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="120.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="Fala" />
+                    <ComboBox prefWidth="150.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="165.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="Gradient" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="210.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="RVSP" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="255.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="IVC" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="300.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="TAPSE" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="345.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="VC" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+            </AnchorPane>
+        </Tab>
+        <Tab text="Pulmonary">
+            <AnchorPane prefHeight="500.0" prefWidth="800.0">
+                <ToolBar layoutX="25.0" layoutY="25.0" prefHeight="40.0" prefWidth="638.0">
+                    <RadioButton prefWidth="200" text="Biological" />
+                    <RadioButton prefWidth="200" text="Native" />
+                    <RadioButton prefWidth="200" text="Artificial" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="75.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="Platki" />
+                    <ComboBox prefWidth="150.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="120.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="Fala" />
+                    <ComboBox prefWidth="150.0" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="165.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="Gradient" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+                <ToolBar layoutX="25.0" layoutY="210.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label text="ACT" />
+                    <TextField prefWidth="100" />
+                </ToolBar>
+            </AnchorPane>
+        </Tab>
+    </TabPane>
+   <TextArea layoutX="800" layoutY="100" prefHeight="500.0" prefWidth="300.0" />
+</AnchorPane>
