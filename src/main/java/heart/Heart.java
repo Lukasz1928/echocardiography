@@ -1,6 +1,6 @@
 package heart;
 
-import heart.parameters.HeartParameters;
+import heart.basic.HeartParameters;
 import heart.valve.valves.AorticValve;
 import heart.valve.valves.MitralValve;
 import heart.valve.valves.PulmonaryValve;

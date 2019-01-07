@@ -5,5 +5,5 @@ import lombok.Builder;
 // TODO: Change Object types to real ones
 @Builder
 public class PulmonaryValve extends Valve {
-    private Object act;
+    private Object act; //1ms
 }

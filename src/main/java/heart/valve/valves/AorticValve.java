@@ -7,14 +7,14 @@ import lombok.Builder;
 @Builder
 public class AorticValve extends Valve {
 
-    private Object vc;
-    private Object ialvot;
-    private Object pht;
-    private Object rpisa;
-    private Object ava;
-    private Object vmax;
-    private Object dvi; //vmax_lvot, vmax_pr
-    private Object eoa; //csa_lvot, vti_lvot, vti_pr
-    private Object at;
+    private Object vc; //1mm
+    private Object ialvot; //1%
+    private Object pht; //1ms
+    private Object rpisa; //1mm
+    private Object ava; //1cm^2
+    private Object vmax; //1m/s
+    private Object dvi; //vmax_lvot, vmax_pr  //1-, 1m/s, 1m/s
+    private Object eoa; //csa_lvot, vti_lvot, vti_pr //1cm^2, 1mm, 1-, 1-
+    private Object at; //1ms
 
 }
