@@ -10,6 +10,11 @@ public class FixedSizeParameter extends Parameter{
         this.size = size;
     }
 
+    public FixedSizeParameter(int size, String unit) {
+        super(unit);
+        this.size = size;
+    }
+
     @Override
     public void setParameters(List<Double> parameters) throws IncorrectSizeException {
         if(parameters.size() != this.size) {

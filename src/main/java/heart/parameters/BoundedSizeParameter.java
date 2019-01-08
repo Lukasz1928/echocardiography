@@ -12,8 +12,20 @@ public class BoundedSizeParameter extends Parameter {
         this.upperSizeBound = upperSizeBound;
     }
 
+    public BoundedSizeParameter(int lowerSizeBound, int upperSizeBound, String unit) {
+        super(unit);
+        this.lowerSizeBound = lowerSizeBound;
+        this.upperSizeBound = upperSizeBound;
+    }
+
     public BoundedSizeParameter(int lowerSizeBound) {
         super();
+        this.lowerSizeBound = lowerSizeBound;
+        this.upperSizeBound = null;
+    }
+
+    public BoundedSizeParameter(int lowerSizeBound, String unit) {
+        super(unit);
         this.lowerSizeBound = lowerSizeBound;
         this.upperSizeBound = null;
     }

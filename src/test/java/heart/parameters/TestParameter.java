@@ -50,11 +50,34 @@ public class TestParameter {
         };
     }
 
-
     @Test
     @UseDataProvider("toStringProvider")
     public void testToString(List<Double> args, String expected) {
         Parameter p = new Parameter();
+        try {
+            p.setParameters(args);
+        }
+        catch(IncorrectSizeException e) {
+            Assert.fail();
+        }
+        Assert.assertEquals(p.toString(), expected);
+    }
+
+    @DataProvider
+    public static Object[][] toStringWithUnitProvider() {
+        return new Object[][]{
+                {new ArrayList<Double>(), "mmHg", ""},
+                {Collections.singletonList(1.5), "mm", "1.5mm"},
+                {Collections.singletonList(1.0), "xyz", "1xyz"},
+                {Arrays.asList(0.0, 1.2, 2.0, 3.456, 1023.0), "cm2", "0/1.2/2/3.456/1023cm2"},
+                {null, ""}
+        };
+    }
+
+    @Test
+    @UseDataProvider("toStringWithUnitProvider")
+    public void testToWithUnitString(List<Double> args, String unit, String expected) {
+        Parameter p = new Parameter(unit);
         try {
             p.setParameters(args);
         }

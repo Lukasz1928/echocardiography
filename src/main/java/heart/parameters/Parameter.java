@@ -4,9 +4,15 @@ import java.util.List;
 
 public class Parameter {
     protected List<Double> parameters;
+    protected String unit;
 
     public Parameter() {
         this.parameters = null;
+        this.unit = "";
+    }
+
+    public Parameter(String unit) {
+        this.unit = unit;
     }
 
     public void setParameters(List<Double> params) throws IncorrectSizeException {
@@ -32,6 +38,8 @@ public class Parameter {
             }
             builder.append("/");
         }
-        return builder.substring(0, builder.length() - 1);
+        builder.deleteCharAt(builder.lastIndexOf("/"));
+        builder.append(this.unit);
+        return builder.toString();
     }
 }
