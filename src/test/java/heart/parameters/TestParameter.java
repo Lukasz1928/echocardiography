@@ -3,7 +3,6 @@ package heart.parameters;
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
-import org.apache.commons.lang3.ArrayUtils;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,57 +30,37 @@ public class TestParameter {
     @UseDataProvider("listArgumentsProvider")
     public void testListSetter(List<Double> args) {
         Parameter p = new Parameter();
-        p.setParameters(args);
+        try {
+            p.setParameters(args);
+        }
+        catch(IncorrectSizeException e) {
+            Assert.fail();
+        }
         Assert.assertEquals(p.getParameters(), args);
     }
 
     @DataProvider
-    public static Object[][] arrayArgumentsProvider() {
+    public static Object[][] toStringProvider() {
         return new Object[][]{
-                {new double[]{}},
-                {new double[]{1.0}},
-                {new double[]{1.0, 2.0}},
-                {new double[]{1.0, 2.0, 3.0}},
-                {new double[]{1.0, 2.0, 3.0, 4.0}}
+                {new ArrayList<Double>(), ""},
+                {Collections.singletonList(1.5), "1.5"},
+                {Collections.singletonList(1.0), "1"},
+                {Arrays.asList(0.0, 1.2, 2.0, 3.456, 1023.0), "0/1.2/2/3.456/1023"},
+                {null, ""}
         };
     }
 
+
     @Test
-    @UseDataProvider("arrayArgumentsProvider")
-    public void testArraySetterWithNoArguments(double... args) {
+    @UseDataProvider("toStringProvider")
+    public void testToString(List<Double> args, String expected) {
         Parameter p = new Parameter();
-        p.setParameters(args);
-        Assert.assertEquals(args.length, p.getParameters().size());
-        for(int i = 0; i < args.length; i++) {
-            Assert.assertEquals(p.getParameters().get(i), args[i], 0.0);
+        try {
+            p.setParameters(args);
         }
-    }
-
-    @Test
-    public void testArraySetterManual0() {
-        Parameter p = new Parameter();
-        p.setParameters();
-        Assert.assertEquals(p.getParameters(), new ArrayList<>());
-    }
-
-    @Test
-    public void testArraySetterManual1() {
-        Parameter p = new Parameter();
-        p.setParameters(1);
-        Assert.assertEquals(p.getParameters(), Collections.singletonList(1.0));
-    }
-
-    @Test
-    public void testArraySetterManual2() {
-        Parameter p = new Parameter();
-        p.setParameters(1, 2);
-        Assert.assertEquals(p.getParameters(), Arrays.asList(1.0, 2.0));
-    }
-
-    @Test
-    public void testArraySetterManual3() {
-        Parameter p = new Parameter();
-        p.setParameters(1, 2, 3);
-        Assert.assertEquals(p.getParameters(), Arrays.asList(1.0, 2.0, 3.0));
+        catch(IncorrectSizeException e) {
+            Assert.fail();
+        }
+        Assert.assertEquals(p.toString(), expected);
     }
 }

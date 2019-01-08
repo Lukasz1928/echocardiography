@@ -1,26 +1,16 @@
 package heart.parameters;
 
-import org.apache.commons.lang3.ArrayUtils;
-import java.util.Arrays;
 import java.util.List;
 
 public class Parameter {
-    private List<Double> parameters;
+    protected List<Double> parameters;
 
-    public Parameter(List<Double> params) {
-        this.setParameters(params);
+    public Parameter() {
+        this.parameters = null;
     }
 
-    public Parameter(double... args) {
-        this.setParameters(args);
-    }
-
-    public void setParameters(List<Double> params) {
+    public void setParameters(List<Double> params) throws IncorrectSizeException {
         this.parameters = params;
-    }
-
-    public void setParameters(double... args) {
-        this.parameters = Arrays.asList(ArrayUtils.toObject(args));
     }
 
     public List<Double> getParameters() {
@@ -29,10 +19,19 @@ public class Parameter {
 
     @Override
     public String toString() {
+        if(this.parameters == null || this.parameters.size() == 0) {
+            return "";
+        }
         StringBuilder builder = new StringBuilder();
         for(Double param : this.parameters) {
-            builder.append(param).append("/");
+            if(param == param.intValue()) {
+                builder.append(param.intValue());
+            }
+            else{
+                builder.append(param);
+            }
+            builder.append("/");
         }
-        return builder.toString();
+        return builder.substring(0, builder.length() - 1);
     }
 }
