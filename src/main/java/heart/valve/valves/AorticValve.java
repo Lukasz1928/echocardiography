@@ -2,6 +2,7 @@ package heart.valve.valves;
 
 import heart.parameters.FixedSizeParameter;
 import heart.parameters.Parameter;
+import heart.valve.leaflets.leaflets.AorticValveLeaflets;
 import lombok.Builder;
 
 @Builder
@@ -27,6 +28,9 @@ public class AorticValve extends Valve {
 
     public AorticValve() {
         super();
+
+        this.leafletsType = AorticValveLeaflets.RIGHT;
+
         this.vc = new FixedSizeParameter(1, "mm");
         this.ialvot = new FixedSizeParameter(1, "%");
         this.pht = new FixedSizeParameter(1, "ms");

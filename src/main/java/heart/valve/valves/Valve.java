@@ -8,10 +8,10 @@ import heart.valve.type.ValveType;
 
 @SuppressWarnings("WeakerAccess")
 public abstract class Valve {
-    private Parameter gradient; //mmHg
-    private ValveType type; // -
-    private RegurgiationLevel regurgiationLevel; // -
-    private LeafletsType leafletsType; // -
+    protected Parameter gradient;
+    protected ValveType type;
+    protected RegurgiationLevel regurgiationLevel;
+    protected LeafletsType leafletsType;
 
     public Valve() {
         this.gradient = new BoundedSizeParameter(2, "mmHg");

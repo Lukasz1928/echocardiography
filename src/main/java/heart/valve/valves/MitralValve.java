@@ -2,8 +2,7 @@ package heart.valve.valves;
 
 import heart.parameters.FixedSizeParameter;
 import heart.parameters.Parameter;
-import heart.valve.gradient.Gradient;
-import heart.valve.leaflets.LeafletsType;
+import heart.valve.leaflets.leaflets.MitralValveLeaflets;
 import lombok.Builder;
 
 @Builder
@@ -26,6 +25,8 @@ public class MitralValve extends Valve {
 
     public MitralValve() {
         super();
+        this.leafletsType = MitralValveLeaflets.RIGHT;
+
         this.mapse = new FixedSizeParameter(1, "mm");
         this.mva = new FixedSizeParameter(1, "cm^2");
         this.vc = new FixedSizeParameter(1, "mm");
