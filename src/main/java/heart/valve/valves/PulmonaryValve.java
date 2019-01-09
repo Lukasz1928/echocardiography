@@ -1,10 +1,15 @@
 package heart.valve.valves;
 
+import heart.parameters.FixedSizeParameter;
 import heart.parameters.Parameter;
 import lombok.Builder;
 
-// TODO: Change Object types to real ones
 @Builder
 public class PulmonaryValve extends Valve {
-    private Parameter act; //1ms
+    private Parameter act;
+
+    public PulmonaryValve() {
+        super();
+        this.act = new FixedSizeParameter(1, "ms");
+    }
 }
