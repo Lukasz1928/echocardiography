@@ -6,7 +6,6 @@ import heart.parameters.Parameter;
 import heart.valve.leaflets.leaflets.TricuspidValveLeaflets;
 import lombok.Builder;
 
-@Builder
 public class TricuspidValve extends Valve {
     private Parameter rvsp;
     private Parameter ivc;

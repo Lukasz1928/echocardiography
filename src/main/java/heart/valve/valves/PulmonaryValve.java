@@ -5,7 +5,6 @@ import heart.parameters.Parameter;
 import heart.valve.leaflets.leaflets.PulmonaryValveLeaflets;
 import lombok.Builder;
 
-@Builder
 public class PulmonaryValve extends Valve {
     private Parameter act;
 

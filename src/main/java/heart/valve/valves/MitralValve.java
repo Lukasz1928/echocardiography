@@ -5,7 +5,6 @@ import heart.parameters.Parameter;
 import heart.valve.leaflets.leaflets.MitralValveLeaflets;
 import lombok.Builder;
 
-@Builder
 public class MitralValve extends Valve {
     private Parameter mapse;
     private Parameter mva;
