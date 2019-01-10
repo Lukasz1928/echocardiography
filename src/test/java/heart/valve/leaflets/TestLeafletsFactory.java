@@ -23,6 +23,8 @@ public class TestLeafletsFactory {
                 {"mitral", "right", MitralValveLeaflets.RIGHT},                   {"mitral", "RIGHT", MitralValveLeaflets.RIGHT},
                 {"mitral", "fibrotic", MitralValveLeaflets.FIBROTIC},             {"mitral", "FIBROTIC", MitralValveLeaflets.FIBROTIC},
                 {"mitral", "calcified", MitralValveLeaflets.CALCIFIED},           {"mitral", "CALCIFIED", MitralValveLeaflets.CALCIFIED},
+                {"mitral", "fibrotic_with_calcifications", MitralValveLeaflets.FIBROTIC_WITH_CALCIFICATIONS},
+                {"mitral", "FIBROTIC_WITH_CALCIFICATIONS", MitralValveLeaflets.FIBROTIC_WITH_CALCIFICATIONS},
                 {"mitral", "front_prolaps", MitralValveLeaflets.FRONT_PROLAPS},   {"mitral", "FRONT_PROLAPS", MitralValveLeaflets.FRONT_PROLAPS},
                 {"mitral", "back_prolaps", MitralValveLeaflets.BACK_PROLAPS},     {"mitral", "BACK_PROLAPS", MitralValveLeaflets.BACK_PROLAPS},
                 {"mitral", "both_prolaps", MitralValveLeaflets.BOTH_PROLAPS},     {"mitral", "BOTH_PROLAPS", MitralValveLeaflets.BOTH_PROLAPS},
@@ -33,12 +35,16 @@ public class TestLeafletsFactory {
                 {"aortic", "calcified", AorticValveLeaflets.CALCIFIED},           {"aortic", "CALCIFIED", AorticValveLeaflets.CALCIFIED},
                 {"aortic", "bicuspid", AorticValveLeaflets.BICUSPID},             {"aortic", "BICUSPID", AorticValveLeaflets.BICUSPID},
 
-                {"tricuspid", "right", TricuspidValveLeaflets.RIGHT}, {"tricuspid", "RIGHT", TricuspidValveLeaflets.RIGHT},
-                {"tricuspid", "fibrotic", TricuspidValveLeaflets.FIBROTIC}, {"tricuspid", "FIBROTIC", TricuspidValveLeaflets.FIBROTIC},
-                {"tricuspid", "calcified", TricuspidValveLeaflets.CALCIFIED}, {"tricuspid", "CALCIFIED", TricuspidValveLeaflets.CALCIFIED},
+                {"tricuspid", "right", TricuspidValveLeaflets.RIGHT},             {"tricuspid", "RIGHT", TricuspidValveLeaflets.RIGHT},
+                {"tricuspid", "fibrotic", TricuspidValveLeaflets.FIBROTIC},       {"tricuspid", "FIBROTIC", TricuspidValveLeaflets.FIBROTIC},
+                {"tricuspid", "calcified", TricuspidValveLeaflets.CALCIFIED},     {"tricuspid", "CALCIFIED", TricuspidValveLeaflets.CALCIFIED},
+                {"tricuspid", "thickened", TricuspidValveLeaflets.THICKENED},     {"tricuspid", "THICKENED", TricuspidValveLeaflets.THICKENED},
+                {"tricuspid", "prolaps", TricuspidValveLeaflets.PROLAPS},         {"tricuspid", "PROLAPS", TricuspidValveLeaflets.PROLAPS},
 
-                {"pulmonary", "right", PulmonaryValveLeaflets.RIGHT}, {"pulmonary", "RIGHT", PulmonaryValveLeaflets.RIGHT},
-                {"pulmonary", "thickened", PulmonaryValveLeaflets.THICKENED}, {"pulmonary", "THICKENED", PulmonaryValveLeaflets.THICKENED}
+                {"pulmonary", "right", PulmonaryValveLeaflets.RIGHT},             {"pulmonary", "RIGHT", PulmonaryValveLeaflets.RIGHT},
+                {"pulmonary", "thickened", PulmonaryValveLeaflets.THICKENED},     {"pulmonary", "THICKENED", PulmonaryValveLeaflets.THICKENED},
+                {"pulmonary", "fibrotic", PulmonaryValveLeaflets.FIBROTIC},       {"pulmonary", "FIBROTIC", PulmonaryValveLeaflets.FIBROTIC},
+                {"pulmonary", "calcified", PulmonaryValveLeaflets.CALCIFIED},     {"pulmonary", "CALCIFIED", PulmonaryValveLeaflets.CALCIFIED},
         };
     }
 
@@ -60,7 +66,7 @@ public class TestLeafletsFactory {
                 {"mitral", ""},               {"aortic", ""},               {"tricuspid", ""},               {"pulmonary", ""},
                 {"mitral", "aaa"},            {"aortic", "aaa"},            {"tricuspid", "aaa"},            {"pulmonary", "aaa"},
                 {"mitral", "_calcified"},     {"aortic", "_calcified"},     {"tricuspid", "_calcified"},     {"pulmonary", "_calcified"},
-                {"mitral", "prolaps"},        {"aortic", "prolaps"},        {"tricuspid", "prolaps"},        {"pulmonary", "prolaps"},
+                {"mitral", "prolap"},         {"aortic", "prolap"},         {"tricuspid", "prolap"},         {"pulmonary", "prolap"},
                 {"mitral", "back_prolap"},    {"aortic", "back_prolap"},    {"tricuspid", "back_prolap"},    {"pulmonary", "back_prolap"},
                 {"mitral", "both-prolaps"},   {"aortic", "both-prolaps"},   {"tricuspid", "both-prolaps"},   {"pulmonary", "both-prolaps"},
                 {"mitral", "ring_calcified"}, {"aortic", "ring_calcified"}, {"tricuspid", "ring_calcified"}, {"pulmonary", "ring_calcified"},
