@@ -38,7 +38,7 @@ public class TestLeafletsFactory {
                 {"tricuspid", "calcified", TricuspidValveLeaflets.CALCIFIED}, {"tricuspid", "CALCIFIED", TricuspidValveLeaflets.CALCIFIED},
 
                 {"pulmonary", "right", PulmonaryValveLeaflets.RIGHT}, {"pulmonary", "RIGHT", PulmonaryValveLeaflets.RIGHT},
-                {"pulmonary", "thikened", PulmonaryValveLeaflets.THICKENED}, {"pulmonary", "THICKENED", PulmonaryValveLeaflets.THICKENED}
+                {"pulmonary", "thickened", PulmonaryValveLeaflets.THICKENED}, {"pulmonary", "THICKENED", PulmonaryValveLeaflets.THICKENED}
         };
     }
 
