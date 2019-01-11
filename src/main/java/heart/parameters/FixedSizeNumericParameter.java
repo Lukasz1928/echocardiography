@@ -1,16 +1,17 @@
 package heart.parameters;
 
+import heart.parameters.exceptions.IncorrectSizeException;
 import java.util.List;
 
-public class FixedSizeParameter extends Parameter{
+public class FixedSizeNumericParameter extends NumericParameter {
     private int size;
 
-    public FixedSizeParameter(int size) {
+    public FixedSizeNumericParameter(int size) {
         super();
         this.size = size;
     }
 
-    public FixedSizeParameter(int size, String unit) {
+    public FixedSizeNumericParameter(int size, String unit) {
         super(unit);
         this.size = size;
     }

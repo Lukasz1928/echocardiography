@@ -1,18 +1,21 @@
 package heart.basic;
 
+import heart.parameters.BoundedSizeNumericParameter;
+import heart.parameters.FixedSizeNumericParameter;
+
 public class HeartParameters {
-    private Object leftVentricle; //2mm
-    private Object rightVerntricle; //2mm
+    private BoundedSizeNumericParameter leftVentricle; //2mm
+    private BoundedSizeNumericParameter rightVerntricle; //2mm
     private Object leftAutrium; //1|3mm + 1cm^2
-    private Object rightAutrium; //2mm
-    private Object interventricularSeptum; //2mm
-    private Object backWall; //2mm
-    private Object ascendingAorta; //1mm
-    private Object bulb; //1mm
-    private Object stj; //1mm
-    private Object pulmonaryArtery; //1mm
+    private BoundedSizeNumericParameter rightAutrium; //2mm
+    private BoundedSizeNumericParameter interventricularSeptum; //2mm
+    private BoundedSizeNumericParameter backWall; //2mm
+    private FixedSizeNumericParameter ascendingAorta; //1mm
+    private FixedSizeNumericParameter bulb; //1mm
+    private FixedSizeNumericParameter stj; //1mm
+    private FixedSizeNumericParameter pulmonaryArtery; //1mm
     private Object pericardium; //-
     private Object contractility; //-
-    private Object ef; //1%
-    private Object ea; //1-
+    private FixedSizeNumericParameter ef; //1%
+    private FixedSizeNumericParameter ea; //1-
 }

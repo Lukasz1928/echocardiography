@@ -1,30 +1,31 @@
 package heart.parameters;
 
+import heart.parameters.exceptions.IncorrectSizeException;
 import java.util.List;
 
-public class BoundedSizeParameter extends Parameter {
+public class BoundedSizeNumericParameter extends NumericParameter {
     private Integer lowerSizeBound;
     private Integer upperSizeBound;
 
-    public BoundedSizeParameter(int lowerSizeBound, int upperSizeBound) {
+    public BoundedSizeNumericParameter(int lowerSizeBound, int upperSizeBound) {
         super();
         this.lowerSizeBound = lowerSizeBound;
         this.upperSizeBound = upperSizeBound;
     }
 
-    public BoundedSizeParameter(int lowerSizeBound, int upperSizeBound, String unit) {
+    public BoundedSizeNumericParameter(int lowerSizeBound, int upperSizeBound, String unit) {
         super(unit);
         this.lowerSizeBound = lowerSizeBound;
         this.upperSizeBound = upperSizeBound;
     }
 
-    public BoundedSizeParameter(int lowerSizeBound) {
+    public BoundedSizeNumericParameter(int lowerSizeBound) {
         super();
         this.lowerSizeBound = lowerSizeBound;
         this.upperSizeBound = null;
     }
 
-    public BoundedSizeParameter(int lowerSizeBound, String unit) {
+    public BoundedSizeNumericParameter(int lowerSizeBound, String unit) {
         super(unit);
         this.lowerSizeBound = lowerSizeBound;
         this.upperSizeBound = null;

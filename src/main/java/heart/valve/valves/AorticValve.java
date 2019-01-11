@@ -1,164 +1,164 @@
 package heart.valve.valves;
 
-import heart.parameters.FixedSizeParameter;
-import heart.parameters.IncorrectSizeException;
-import heart.parameters.Parameter;
+import heart.parameters.FixedSizeNumericParameter;
+import heart.parameters.NumericParameter;
+import heart.parameters.exceptions.ParameterException;
 import heart.valve.leaflets.leaflets.AorticValveLeaflets;
 import java.util.List;
 
 public class AorticValve extends Valve {
 
-    private Parameter vc;
-    private Parameter iaLvot;
-    private Parameter pht;
-    private Parameter rpisa;
-    private Parameter ava;
-    private Parameter vmax;
+    private NumericParameter vc;
+    private NumericParameter iaLvot;
+    private NumericParameter pht;
+    private NumericParameter rpisa;
+    private NumericParameter ava;
+    private NumericParameter vmax;
 
-    private Parameter dvi;
-    private Parameter vmaxLvot;
-    private Parameter vmaxPr;
+    private NumericParameter dvi;
+    private NumericParameter vmaxLvot;
+    private NumericParameter vmaxPr;
 
-    private Parameter eoa;
-    private Parameter csaLvot;
-    private Parameter vtiLvot;
-    private Parameter vtiPr;
+    private NumericParameter eoa;
+    private NumericParameter csaLvot;
+    private NumericParameter vtiLvot;
+    private NumericParameter vtiPr;
 
-    private Parameter at;
+    private NumericParameter at;
 
     public AorticValve() {
         super();
 
         this.setLeafletsType(AorticValveLeaflets.RIGHT);
 
-        this.vc = new FixedSizeParameter(1, "mm");
-        this.iaLvot = new FixedSizeParameter(1, "%");
-        this.pht = new FixedSizeParameter(1, "ms");
-        this.rpisa = new FixedSizeParameter(1, "mm");
-        this.ava = new FixedSizeParameter(1, "cm^2");
-        this.vmax = new FixedSizeParameter(1, "m/s");
+        this.vc = new FixedSizeNumericParameter(1, "mm");
+        this.iaLvot = new FixedSizeNumericParameter(1, "%");
+        this.pht = new FixedSizeNumericParameter(1, "ms");
+        this.rpisa = new FixedSizeNumericParameter(1, "mm");
+        this.ava = new FixedSizeNumericParameter(1, "cm^2");
+        this.vmax = new FixedSizeNumericParameter(1, "m/s");
 
-        this.dvi = new FixedSizeParameter(1);
-        this.vmaxLvot = new FixedSizeParameter(1, "m/s");
-        this.vmaxPr = new FixedSizeParameter(1, "m/s");
+        this.dvi = new FixedSizeNumericParameter(1);
+        this.vmaxLvot = new FixedSizeNumericParameter(1, "m/s");
+        this.vmaxPr = new FixedSizeNumericParameter(1, "m/s");
 
-        this.eoa = new FixedSizeParameter(1, "cm^2");
-        this.csaLvot = new FixedSizeParameter(1, "mm");
-        this.vtiLvot = new FixedSizeParameter(1);
-        this.vtiPr = new FixedSizeParameter(1);
+        this.eoa = new FixedSizeNumericParameter(1, "cm^2");
+        this.csaLvot = new FixedSizeNumericParameter(1, "mm");
+        this.vtiLvot = new FixedSizeNumericParameter(1);
+        this.vtiPr = new FixedSizeNumericParameter(1);
 
-        this.at = new FixedSizeParameter(1, "ms");
+        this.at = new FixedSizeNumericParameter(1, "ms");
     }
 
-    public Parameter getVc() {
+    public NumericParameter getVc() {
         return vc;
     }
 
-    public void setVc(List<Double> vc) throws IncorrectSizeException {
+    public void setVc(List<Double> vc) throws ParameterException {
         this.vc.setParameters(vc);
     }
 
-    public Parameter getIaLvot() {
+    public NumericParameter getIaLvot() {
         return iaLvot;
     }
 
-    public void setIaLvot(List<Double> iaLvot) throws IncorrectSizeException {
+    public void setIaLvot(List<Double> iaLvot) throws ParameterException {
         this.iaLvot.setParameters(iaLvot);
     }
 
-    public Parameter getPht() {
+    public NumericParameter getPht() {
         return pht;
     }
 
-    public void setPht(List<Double> pht) throws IncorrectSizeException {
+    public void setPht(List<Double> pht) throws ParameterException {
         this.pht.setParameters(pht);
     }
 
-    public Parameter getRpisa() {
+    public NumericParameter getRpisa() {
         return rpisa;
     }
 
-    public void setRpisa(List<Double> rpisa) throws IncorrectSizeException {
+    public void setRpisa(List<Double> rpisa) throws ParameterException {
         this.rpisa.setParameters(rpisa);
     }
 
-    public Parameter getAva() {
+    public NumericParameter getAva() {
         return ava;
     }
 
-    public void setAva(List<Double> ava) throws IncorrectSizeException {
+    public void setAva(List<Double> ava) throws ParameterException {
         this.ava.setParameters(ava);
     }
 
-    public Parameter getVmax() {
+    public NumericParameter getVmax() {
         return vmax;
     }
 
-    public void setVmax(List<Double> vmax) throws IncorrectSizeException {
+    public void setVmax(List<Double> vmax) throws ParameterException {
         this.vmax.setParameters(vmax);
     }
 
-    public Parameter getDvi() {
+    public NumericParameter getDvi() {
         return dvi;
     }
 
-    public void setDvi(List<Double> dvi) throws IncorrectSizeException {
+    public void setDvi(List<Double> dvi) throws ParameterException {
         this.dvi.setParameters(dvi);
     }
 
-    public Parameter getVmaxLvot() {
+    public NumericParameter getVmaxLvot() {
         return vmaxLvot;
     }
 
-    public void setVmaxLvot(List<Double> vmaxLvot) throws IncorrectSizeException {
+    public void setVmaxLvot(List<Double> vmaxLvot) throws ParameterException {
         this.vmaxLvot.setParameters(vmaxLvot);
     }
 
-    public Parameter getVmaxPr() {
+    public NumericParameter getVmaxPr() {
         return vmaxPr;
     }
 
-    public void setVmaxPr(List<Double> vmaxPr) throws IncorrectSizeException {
+    public void setVmaxPr(List<Double> vmaxPr) throws ParameterException {
         this.vmaxPr.setParameters(vmaxPr);
     }
 
-    public Parameter getEoa() {
+    public NumericParameter getEoa() {
         return eoa;
     }
 
-    public void setEoa(List<Double> eoa) throws IncorrectSizeException {
+    public void setEoa(List<Double> eoa) throws ParameterException {
         this.eoa.setParameters(eoa);
     }
 
-    public Parameter getCsaLvot() {
+    public NumericParameter getCsaLvot() {
         return csaLvot;
     }
 
-    public void setCsaLvot(List<Double> csaLvot) throws IncorrectSizeException {
+    public void setCsaLvot(List<Double> csaLvot) throws ParameterException {
         this.csaLvot.setParameters(csaLvot);
     }
 
-    public Parameter getVtiLvot() {
+    public NumericParameter getVtiLvot() {
         return vtiLvot;
     }
 
-    public void setVtiLvot(List<Double> vtiLvot) throws IncorrectSizeException {
+    public void setVtiLvot(List<Double> vtiLvot) throws ParameterException {
         this.vtiLvot.setParameters(vtiLvot);
     }
 
-    public Parameter getVtiPr() {
+    public NumericParameter getVtiPr() {
         return vtiPr;
     }
 
-    public void setVtiPr(List<Double> vtiPr) throws IncorrectSizeException {
+    public void setVtiPr(List<Double> vtiPr) throws ParameterException {
         this.vtiPr.setParameters(vtiPr);
     }
 
-    public Parameter getAt() {
+    public NumericParameter getAt() {
         return at;
     }
 
-    public void setAt(List<Double> at) throws IncorrectSizeException {
+    public void setAt(List<Double> at) throws ParameterException {
         this.at.setParameters(at);
     }
 }

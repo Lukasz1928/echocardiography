@@ -1,26 +1,26 @@
 package heart.valve.valves;
 
-import heart.parameters.FixedSizeParameter;
-import heart.parameters.IncorrectSizeException;
-import heart.parameters.Parameter;
+import heart.parameters.FixedSizeNumericParameter;
+import heart.parameters.NumericParameter;
+import heart.parameters.exceptions.ParameterException;
 import heart.valve.leaflets.leaflets.PulmonaryValveLeaflets;
 import java.util.List;
 
 public class PulmonaryValve extends Valve {
-    private Parameter act;
+    private NumericParameter act;
 
     public PulmonaryValve() {
         super();
         this.setLeafletsType(PulmonaryValveLeaflets.RIGHT);
 
-        this.act = new FixedSizeParameter(1, "ms");
+        this.act = new FixedSizeNumericParameter(1, "ms");
     }
 
-    public Parameter getAct() {
+    public NumericParameter getAct() {
         return act;
     }
 
-    public void setAct(List<Double> act) throws IncorrectSizeException {
+    public void setAct(List<Double> act) throws ParameterException {
         this.act.setParameters(act);
     }
 }

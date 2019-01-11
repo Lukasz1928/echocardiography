@@ -3,6 +3,8 @@ package heart.parameters;
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
+import heart.parameters.exceptions.IncorrectSizeException;
+import heart.parameters.exceptions.ParameterException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +15,7 @@ import java.util.Collections;
 import java.util.List;
 
 @RunWith(DataProviderRunner.class)
-public class TestParameter {
+public class TestNumericParameter {
 
     @DataProvider
     public static Object[][] listArgumentsProvider() {
@@ -29,11 +31,11 @@ public class TestParameter {
     @Test
     @UseDataProvider("listArgumentsProvider")
     public void testListSetter(List<Double> args) {
-        Parameter p = new Parameter();
+        NumericParameter p = new NumericParameter();
         try {
             p.setParameters(args);
         }
-        catch(IncorrectSizeException e) {
+        catch(ParameterException e) {
             Assert.fail();
         }
         Assert.assertEquals(p.getParameters(), args);
@@ -53,11 +55,11 @@ public class TestParameter {
     @Test
     @UseDataProvider("toStringProvider")
     public void testToString(List<Double> args, String expected) {
-        Parameter p = new Parameter();
+        NumericParameter p = new NumericParameter();
         try {
             p.setParameters(args);
         }
-        catch(IncorrectSizeException e) {
+        catch(ParameterException e) {
             Assert.fail();
         }
         Assert.assertEquals(p.toString(), expected);
@@ -77,11 +79,11 @@ public class TestParameter {
     @Test
     @UseDataProvider("toStringWithUnitProvider")
     public void testToWithUnitString(List<Double> args, String unit, String expected) {
-        Parameter p = new Parameter(unit);
+        NumericParameter p = new NumericParameter(unit);
         try {
             p.setParameters(args);
         }
-        catch(IncorrectSizeException e) {
+        catch(ParameterException e) {
             Assert.fail();
         }
         Assert.assertEquals(p.toString(), expected);

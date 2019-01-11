@@ -3,6 +3,8 @@ package heart.parameters;
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
+import heart.parameters.exceptions.IncorrectSizeException;
+import heart.parameters.exceptions.ParameterException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +15,7 @@ import java.util.Collections;
 import java.util.List;
 
 @RunWith(DataProviderRunner.class)
-public class TestFixedSizeParameter {
+public class TestFixedSizeNumericParameter {
 
     @DataProvider
     public static Object[][] correctSizeProvider() {
@@ -29,11 +31,11 @@ public class TestFixedSizeParameter {
     @Test
     @UseDataProvider("correctSizeProvider")
     public void testSizeConstraintCorrect(int size, List<Double> parameters) {
-        Parameter p = new FixedSizeParameter(size);
+        NumericParameter p = new FixedSizeNumericParameter(size);
         try {
             p.setParameters(parameters);
         }
-        catch(IncorrectSizeException e) {
+        catch(ParameterException e) {
             Assert.fail();
         }
         Assert.assertEquals(p.getParameters(), parameters);
@@ -53,13 +55,16 @@ public class TestFixedSizeParameter {
     @Test
     @UseDataProvider("incorrectSizeProvider")
     public void testSizeConstraintIncorrect(int size, List<Double> parameters) {
-        Parameter p = new FixedSizeParameter(size);
+        NumericParameter p = new FixedSizeNumericParameter(size);
         try {
             p.setParameters(parameters);
             Assert.fail();
         }
         catch(IncorrectSizeException e) {
             //it's supposed to be thrown
+        }
+        catch(ParameterException e) {
+            Assert.fail();
         }
     }
 }
