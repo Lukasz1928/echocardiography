@@ -34,11 +34,11 @@ public class TestNumericParameter {
         NumericParameter p = new NumericParameter();
         try {
             p.setParameters(args);
+            Assert.assertEquals(p.getParameters(), args);
         }
         catch(ParameterException e) {
             Assert.fail();
         }
-        Assert.assertEquals(p.getParameters(), args);
     }
 
     @DataProvider

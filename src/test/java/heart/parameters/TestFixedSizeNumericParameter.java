@@ -34,11 +34,12 @@ public class TestFixedSizeNumericParameter {
         NumericParameter p = new FixedSizeNumericParameter(size);
         try {
             p.setParameters(parameters);
+            Assert.assertEquals(p.getParameters(), parameters);
         }
         catch(ParameterException e) {
             Assert.fail();
         }
-        Assert.assertEquals(p.getParameters(), parameters);
+
     }
 
     @DataProvider

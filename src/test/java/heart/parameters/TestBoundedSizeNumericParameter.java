@@ -34,11 +34,12 @@ public class TestBoundedSizeNumericParameter {
         NumericParameter p = new BoundedSizeNumericParameter(low, high);
         try {
             p.setParameters(parameters);
+            Assert.assertEquals(p.getParameters(), parameters);
         }
         catch(ParameterException e) {
             Assert.fail();
         }
-        Assert.assertEquals(p.getParameters(), parameters);
+
     }
 
     @DataProvider
@@ -58,11 +59,12 @@ public class TestBoundedSizeNumericParameter {
         NumericParameter p = new BoundedSizeNumericParameter(bound);
         try {
             p.setParameters(parameters);
+            Assert.assertEquals(p.getParameters(), parameters);
         }
         catch(ParameterException e) {
             Assert.fail();
         }
-        Assert.assertEquals(p.getParameters(), parameters);
+
     }
 
 

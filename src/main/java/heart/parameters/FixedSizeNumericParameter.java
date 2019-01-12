@@ -1,6 +1,7 @@
 package heart.parameters;
 
 import heart.parameters.exceptions.IncorrectSizeException;
+import heart.parameters.exceptions.ParameterException;
 import java.util.List;
 
 public class FixedSizeNumericParameter extends NumericParameter {
@@ -17,10 +18,10 @@ public class FixedSizeNumericParameter extends NumericParameter {
     }
 
     @Override
-    public void setParameters(List<Double> parameters) throws IncorrectSizeException {
+    public void setParameters(List<Double> parameters) throws ParameterException {
         if(parameters.size() != this.size) {
             throw new IncorrectSizeException();
         }
-        this.parameters = parameters;
+        super.setParameters(parameters);
     }
 }

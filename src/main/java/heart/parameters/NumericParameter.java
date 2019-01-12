@@ -1,27 +1,14 @@
 package heart.parameters;
 
-import heart.parameters.exceptions.ParameterException;
-import java.util.List;
-
-public class NumericParameter {
-    protected List<Double> parameters;
+public class NumericParameter extends Parameter<Double> {
     protected String unit;
 
     public NumericParameter() {
-        this.parameters = null;
         this.unit = "";
     }
 
     public NumericParameter(String unit) {
         this.unit = unit;
-    }
-
-    public void setParameters(List<Double> parameters) throws ParameterException {
-        this.parameters = parameters;
-    }
-
-    public List<Double> getParameters() {
-        return this.parameters;
     }
 
     @Override
@@ -33,8 +20,7 @@ public class NumericParameter {
         for(Double param : this.parameters) {
             if(param == param.intValue()) {
                 builder.append(param.intValue());
-            }
-            else{
+            } else {
                 builder.append(param);
             }
             builder.append("/");
