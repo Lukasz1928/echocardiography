@@ -20,18 +20,6 @@ public class BoundedSizeNumericParameter extends NumericParameter {
         this.upperSizeBound = upperSizeBound;
     }
 
-    public BoundedSizeNumericParameter(int lowerSizeBound) {
-        super();
-        this.lowerSizeBound = lowerSizeBound;
-        this.upperSizeBound = null;
-    }
-
-    public BoundedSizeNumericParameter(int lowerSizeBound, String unit) {
-        super(unit);
-        this.lowerSizeBound = lowerSizeBound;
-        this.upperSizeBound = null;
-    }
-
     @Override
     public void setParameters(List<Double> parameters) throws ParameterException {
         if(!inBounds(parameters.size())) {

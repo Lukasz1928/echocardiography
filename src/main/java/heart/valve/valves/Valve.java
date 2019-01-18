@@ -15,7 +15,7 @@ public abstract class Valve {
     private LeafletsType leafletsType;
 
     public Valve() {
-        this.gradient = new BoundedSizeNumericParameter(2, "mmHg");
+        this.gradient = new BoundedSizeNumericParameter(1,2, "mmHg");
         this.type = ValveType.NATIVE;
         this.regurgiationLevel = RegurgiationLevel.NONE;
         this.leafletsType = null;

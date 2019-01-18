@@ -39,7 +39,6 @@ public class TestFixedSizeNumericParameter {
         catch(ParameterException e) {
             Assert.fail();
         }
-
     }
 
     @DataProvider
@@ -67,5 +66,29 @@ public class TestFixedSizeNumericParameter {
         catch(ParameterException e) {
             Assert.fail();
         }
+    }
+
+    @DataProvider
+    public static Object[][] correctSizeProviderWithUnits() {
+        return new Object[][]{
+                {0, new ArrayList<Double>(), "mm", ""},
+                {1, Collections.singletonList(1.1), "cm^2", "1.1cm^2"},
+                {2, Arrays.asList(1.0, 2.0), "mmHg", "1/2mmHg"},
+                {3, Arrays.asList(1.0, 3.0, 2.0), "dl", "1/3/2dl"},
+                {4, Arrays.asList(0.0, 2.0, 1.0, 17000000.5), "", "0/2/1/17000000.5"}
+        };
+    }
+
+    @Test
+    @UseDataProvider("correctSizeProviderWithUnits")
+    public void testToStringWithUnits(int size, List<Double> parameters, String unit, String expected) {
+        NumericParameter p = new FixedSizeNumericParameter(size, unit);
+        try {
+            p.setParameters(parameters);
+        }
+        catch(ParameterException e) {
+            Assert.fail();
+        }
+        Assert.assertEquals(p.toString(), expected);
     }
 }

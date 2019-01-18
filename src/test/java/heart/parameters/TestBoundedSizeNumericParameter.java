@@ -43,32 +43,6 @@ public class TestBoundedSizeNumericParameter {
     }
 
     @DataProvider
-    public static Object[][] correctSizeWithOneBoundProvider() {
-        return new Object[][]{
-                {0,  new ArrayList<Double>()},
-                {0,  Collections.singletonList(1.1)},
-                {1,  Arrays.asList(1.0, 2.0)},
-                {3,  Arrays.asList(1.0, 3.0, 2.0)},
-                {-1, Arrays.asList(0.0, 2.0, 1.0, 17000000.5)}
-        };
-    }
-
-    @Test
-    @UseDataProvider("correctSizeWithOneBoundProvider")
-    public void testCorrectSizeConstraintWithOneBound(int bound, List<Double> parameters) {
-        NumericParameter p = new BoundedSizeNumericParameter(bound);
-        try {
-            p.setParameters(parameters);
-            Assert.assertEquals(p.getParameters(), parameters);
-        }
-        catch(ParameterException e) {
-            Assert.fail();
-        }
-
-    }
-
-
-    @DataProvider
     public static Object[][] incorrectSizeWithBothBoundsProvider() {
         return new Object[][]{
                 {1, 2, new ArrayList<Double>()},
@@ -83,33 +57,6 @@ public class TestBoundedSizeNumericParameter {
     @UseDataProvider("incorrectSizeWithBothBoundsProvider")
     public void testIncorrectSizeConstraintWithBothBounds(int low, int high, List<Double> parameters) {
         NumericParameter p = new BoundedSizeNumericParameter(low, high);
-        try {
-            p.setParameters(parameters);
-            Assert.fail();
-        }
-        catch(IncorrectSizeException e) {
-            //it's supposed to be thrown
-        }
-        catch(ParameterException e) {
-            Assert.fail();
-        }
-    }
-
-    @DataProvider
-    public static Object[][] incorrectSizeWithOneBoundProvider() {
-        return new Object[][]{
-                {1,  new ArrayList<Double>()},
-                {2,  Collections.singletonList(1.1)},
-                {3,  Arrays.asList(1.0, 2.0)},
-                {4,  Arrays.asList(1.0, 3.0, 2.0)},
-                {7, Arrays.asList(0.0, 2.0, 1.0, 17000000.5)}
-        };
-    }
-
-    @Test
-    @UseDataProvider("incorrectSizeWithOneBoundProvider")
-    public void testIncorrectSizeConstraintWithOneBound(int bound, List<Double> parameters) {
-        NumericParameter p = new BoundedSizeNumericParameter(bound);
         try {
             p.setParameters(parameters);
             Assert.fail();

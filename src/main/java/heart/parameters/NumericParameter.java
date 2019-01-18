@@ -1,5 +1,7 @@
 package heart.parameters;
 
+import java.text.DecimalFormat;
+
 public class NumericParameter extends Parameter<Double> {
     protected String unit;
 
@@ -17,11 +19,13 @@ public class NumericParameter extends Parameter<Double> {
             return "";
         }
         StringBuilder builder = new StringBuilder();
+        DecimalFormat df = new DecimalFormat("#");
+        df.setMaximumFractionDigits(5);
         for(Double param : this.parameters) {
             if(param == param.intValue()) {
                 builder.append(param.intValue());
             } else {
-                builder.append(param);
+                builder.append(df.format(param).replace(',', '.'));
             }
             builder.append("/");
         }

@@ -5,6 +5,7 @@ import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
 import heart.parameters.exceptions.IncorrectSizeException;
 import heart.parameters.exceptions.ParameterException;
+import heart.parameters.exceptions.ParameterNotSetException;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -87,5 +88,22 @@ public class TestNumericParameter {
             Assert.fail();
         }
         Assert.assertEquals(p.toString(), expected);
+    }
+
+
+
+    @Test
+    public void testGetWithoutSettingParameters() {
+        NumericParameter p = new NumericParameter();
+        try {
+            p.getParameters();
+            Assert.fail();
+        }
+        catch(ParameterNotSetException e) {
+            //it's supposed to be thrown
+        }
+        catch(ParameterException e) {
+            Assert.fail();
+        }
     }
 }
