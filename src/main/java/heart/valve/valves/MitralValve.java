@@ -1,7 +1,6 @@
 package heart.valve.valves;
 
 import heart.parameters.FixedSizeNumericParameter;
-import heart.parameters.exceptions.IncorrectSizeException;
 import heart.parameters.NumericParameter;
 import heart.parameters.exceptions.ParameterException;
 import heart.valve.leaflets.leaflets.MitralValveLeaflets;
