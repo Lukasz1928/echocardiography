@@ -8,6 +8,10 @@ import heart.components.valve.leaflets.leaflets.TricuspidValveLeaflets;
 
 public class LeafletsFactory {
 
+    private LeafletsFactory() {
+        //there's no reason to instantiate this class
+    }
+
     public static LeafletsType getLeaflets(String valve, String type) throws NoSuchValveException, NoSuchLeafletsTypeException {
         if(valve == null) {
             throw new NoSuchValveException();
