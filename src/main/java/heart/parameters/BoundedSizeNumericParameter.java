@@ -29,12 +29,6 @@ public class BoundedSizeNumericParameter extends NumericParameter {
     }
 
     private boolean inBounds(int value) {
-        if(this.lowerSizeBound != null && this.lowerSizeBound > value) {
-            return false;
-        }
-        if(this.upperSizeBound != null && this.upperSizeBound < value) {
-            return false;
-        }
-        return true;
+        return value >= this.lowerSizeBound && value <= this.upperSizeBound;
     }
 }

@@ -68,4 +68,28 @@ public class TestBoundedSizeNumericParameter {
             Assert.fail();
         }
     }
+
+    @DataProvider
+    public static Object[][] correctSizeProviderWithUnits() {
+        return new Object[][]{
+                {0, 2, new ArrayList<Double>(), "mm", ""},
+                {1, 1, Collections.singletonList(1.1), "cm^2", "1.1cm^2"},
+                {2, 10, Arrays.asList(1.0, 2.0), "mmHg", "1/2mmHg"},
+                {1, 100, Arrays.asList(1.0, 3.0, 2.0), "dl", "1/3/2dl"},
+                {4, 6, Arrays.asList(0.0, 2.0, 1.0, 17000000.5), "", "0/2/1/17000000.5"}
+        };
+    }
+
+    @Test
+    @UseDataProvider("correctSizeProviderWithUnits")
+    public void testToStringWithUnits(int lowerSizeBound, int upperSizeBound, List<Double> parameters, String unit, String expected) {
+        NumericParameter p = new BoundedSizeNumericParameter(lowerSizeBound, upperSizeBound, unit);
+        try {
+            p.setParameters(parameters);
+        }
+        catch(ParameterException e) {
+            Assert.fail();
+        }
+        Assert.assertEquals(p.toString(), expected);
+    }
 }
