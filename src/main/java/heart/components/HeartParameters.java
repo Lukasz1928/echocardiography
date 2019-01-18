@@ -1,4 +1,4 @@
-package heart.basic;
+package heart.components;
 
 import heart.parameters.BoundedSizeNumericParameter;
 import heart.parameters.DescriptiveParameter;

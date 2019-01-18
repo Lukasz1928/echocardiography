@@ -1,11 +1,11 @@
-package heart.valve.valves;
+package heart.components.valve.valves;
 
 import heart.parameters.BoundedSizeNumericParameter;
 import heart.parameters.NumericParameter;
 import heart.parameters.exceptions.ParameterException;
-import heart.valve.leaflets.LeafletsType;
-import heart.valve.regurgiation.RegurgiationLevel;
-import heart.valve.type.ValveType;
+import heart.components.valve.leaflets.LeafletsType;
+import heart.components.valve.regurgiation.RegurgiationLevel;
+import heart.components.valve.type.ValveType;
 import java.util.List;
 
 public abstract class Valve {

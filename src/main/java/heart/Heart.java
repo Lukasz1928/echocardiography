@@ -1,10 +1,10 @@
 package heart;
 
-import heart.basic.HeartParameters;
-import heart.valve.valves.AorticValve;
-import heart.valve.valves.MitralValve;
-import heart.valve.valves.PulmonaryValve;
-import heart.valve.valves.TricuspidValve;
+import heart.components.HeartParameters;
+import heart.components.valve.valves.AorticValve;
+import heart.components.valve.valves.MitralValve;
+import heart.components.valve.valves.PulmonaryValve;
+import heart.components.valve.valves.TricuspidValve;
 
 public class Heart {
     private HeartParameters parameters;

@@ -1,4 +1,4 @@
-package heart.valve.type;
+package heart.components.valve.type;
 
 public enum ValveType {
     NATIVE,

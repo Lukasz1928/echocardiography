@@ -1,9 +1,9 @@
-package heart.valve.valves;
+package heart.components.valve.valves;
 
 import heart.parameters.FixedSizeNumericParameter;
 import heart.parameters.NumericParameter;
 import heart.parameters.exceptions.ParameterException;
-import heart.valve.leaflets.leaflets.MitralValveLeaflets;
+import heart.components.valve.leaflets.leaflets.MitralValveLeaflets;
 import java.util.List;
 
 public class MitralValve extends Valve {

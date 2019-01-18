@@ -1,15 +1,15 @@
-package heart.valve.leaflets;
+package heart.components.valve.leaflets;
 
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
-import heart.valve.leaflets.factory.LeafletsFactory;
-import heart.valve.leaflets.factory.NoSuchLeafletsTypeException;
-import heart.valve.leaflets.factory.NoSuchValveException;
-import heart.valve.leaflets.leaflets.AorticValveLeaflets;
-import heart.valve.leaflets.leaflets.MitralValveLeaflets;
-import heart.valve.leaflets.leaflets.PulmonaryValveLeaflets;
-import heart.valve.leaflets.leaflets.TricuspidValveLeaflets;
+import heart.components.valve.leaflets.factory.LeafletsFactory;
+import heart.components.valve.leaflets.factory.NoSuchLeafletsTypeException;
+import heart.components.valve.leaflets.factory.NoSuchValveException;
+import heart.components.valve.leaflets.leaflets.AorticValveLeaflets;
+import heart.components.valve.leaflets.leaflets.MitralValveLeaflets;
+import heart.components.valve.leaflets.leaflets.PulmonaryValveLeaflets;
+import heart.components.valve.leaflets.leaflets.TricuspidValveLeaflets;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

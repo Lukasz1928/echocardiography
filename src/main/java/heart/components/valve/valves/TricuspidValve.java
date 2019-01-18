@@ -1,10 +1,10 @@
-package heart.valve.valves;
+package heart.components.valve.valves;
 
 import heart.parameters.BoundedSizeNumericParameter;
 import heart.parameters.FixedSizeNumericParameter;
 import heart.parameters.NumericParameter;
 import heart.parameters.exceptions.ParameterException;
-import heart.valve.leaflets.leaflets.TricuspidValveLeaflets;
+import heart.components.valve.leaflets.leaflets.TricuspidValveLeaflets;
 
 import java.util.List;
 

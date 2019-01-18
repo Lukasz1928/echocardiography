@@ -1,10 +1,10 @@
-package heart.valve.leaflets.factory;
+package heart.components.valve.leaflets.factory;
 
-import heart.valve.leaflets.LeafletsType;
-import heart.valve.leaflets.leaflets.AorticValveLeaflets;
-import heart.valve.leaflets.leaflets.MitralValveLeaflets;
-import heart.valve.leaflets.leaflets.PulmonaryValveLeaflets;
-import heart.valve.leaflets.leaflets.TricuspidValveLeaflets;
+import heart.components.valve.leaflets.LeafletsType;
+import heart.components.valve.leaflets.leaflets.AorticValveLeaflets;
+import heart.components.valve.leaflets.leaflets.MitralValveLeaflets;
+import heart.components.valve.leaflets.leaflets.PulmonaryValveLeaflets;
+import heart.components.valve.leaflets.leaflets.TricuspidValveLeaflets;
 
 public class LeafletsFactory {
 

@@ -1,4 +1,4 @@
-package heart.valve.leaflets.factory;
+package heart.components.valve.leaflets.factory;
 
 public class NoSuchValveException extends Exception {
 }
