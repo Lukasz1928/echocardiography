@@ -1,16 +1,40 @@
 package heart;
 
 import heart.components.HeartParameters;
-import heart.components.valve.valves.AorticValve;
-import heart.components.valve.valves.MitralValve;
-import heart.components.valve.valves.PulmonaryValve;
-import heart.components.valve.valves.TricuspidValve;
+import heart.components.valve.valves.*;
 
 public class Heart {
     private HeartParameters parameters;
-    private MitralValve mitralValve;
-    private AorticValve aorticValve;
-    private PulmonaryValve pulmonaryValve;
-    private TricuspidValve tricuspidValve;
+    private Valve mitralValve;
+    private Valve aorticValve;
+    private Valve pulmonaryValve;
+    private Valve tricuspidValve;
 
+    public Heart() {
+        this.parameters = new HeartParameters();
+        this.mitralValve = new MitralValve();
+        this.aorticValve = new AorticValve();
+        this.pulmonaryValve = new PulmonaryValve();
+        this.tricuspidValve = new TricuspidValve();
+    }
+
+    public HeartParameters getParameters() {
+        return parameters;
+    }
+
+    public Valve getTricuspidValve() {
+        return tricuspidValve;
+    }
+
+    public Valve getPulmonaryValve() {
+        return pulmonaryValve;
+    }
+
+    public Valve getAorticValve() {
+        return aorticValve;
+    }
+
+    public Valve getMitralValve() {
+        return mitralValve;
+    }
 }
