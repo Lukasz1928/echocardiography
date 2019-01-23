@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane id="main-pane" prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="sample.Controller">
+    <AnchorPane id="parameters-pane" layoutX="25.0" layoutY="100.0" prefHeight="750.0" prefWidth="750.0" >
+        <TabPane id="parameters-tab-pane" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"  style="-fx-background-color: gray;" tabClosingPolicy="UNAVAILABLE">
+        <Tab id="parameters-general-tab" text="General">
+            <AnchorPane id="parameters-general-pane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <ToolBar id="left-ventricle-toolbar" layoutX="25.0" layoutY="25.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="left-ventricle-label" text="lewa komora"/>
+                    <TextField id="left-ventricle-input" prefWidth="100.0"/>
+                </ToolBar>
+                <ToolBar id="general-right-ventricle-toolbar" layoutX="25.0" layoutY="70.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="general-right-ventricle-label" text="pr kom"/>
+                    <TextField id="general-right-ventricle-input" prefWidth="100.0"/>
+                </ToolBar>
+                <ToolBar id="general-septum-toolbar" layoutX="25.0" layoutY="115.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="general-septum-label" text="przegroda"/>
+                    <TextField id="general-septum-input" prefWidth="100.0"/>
+                </ToolBar>
+                <ToolBar id="general-wall-toolbar" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="general-wall-label" text="sciana"/>
+                    <TextField id="general-wall-input" prefWidth="100.0"/>
+                </ToolBar>
+                <ToolBar id="general-left-autrium-toolbar" layoutX="25.0" layoutY="205.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="general-left-autrium-label" text="l przed"/>
+                    <TextField id="general-left-autrium-input" prefWidth="100.0"/>
+                </ToolBar>
+                <ToolBar id="general-right-autrium-toolbar" layoutX="25.0" layoutY="250.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="general-right-autrium-label" text="p przed"/>
+                    <TextField id="general-right-autrium-intput" prefWidth="100.0"/>
+                </ToolBar>
+                <ToolBar id="general-aorta-toolbar" layoutX="25.0" layoutY="295.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="general-aorta-label" text="aorta"/>
+                    <TextField id="general-aorta-input" prefWidth="100.0"/>
+                </ToolBar>
+                <ToolBar id="general-trunk-toolbar" layoutX="25.0" layoutY="340.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="general-trunk-label" text="pien"/>
+                    <TextField id="general-trunk-input" prefWidth="100.0"/>
+                </ToolBar>
+                <ToolBar id="general-ef-toolbar" layoutX="25.0" layoutY="385.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="general-ef-label" text="EF"/>
+                    <TextField id="general-ef-input" prefWidth="100.0"/>
+                </ToolBar>
+                <ToolBar id="general-ea-toolbar" layoutX="25.0" layoutY="430.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="general-ea-label" text="E/A"/>
+                    <TextField id="general-ea-input" prefWidth="100.0"/>
+                </ToolBar>
+                <ToolBar id="general-dt-toolbar" layoutX="25.0" layoutY="475.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="general-dt-label" text="DT"/>
+                    <TextField id="general-dt-input" prefWidth="100.0"/>
+                </ToolBar>
+                <ToolBar id="general-pericardium-toolbar" layoutX="25.0" layoutY="520.0" prefHeight="40.0" prefWidth="300.0">
+                    <Label id="general-pericarium-type-label" text="osierdzie"/>
+                    <ComboBox id="general-pericardium-type-input" prefWidth="100.0"/>
+                    <Label id="general-pericardium-amount-label" text="ilosc"/>
+                    <TextField id="general-pericardium-amount-input" prefWidth="100.0"/>
+                </ToolBar>
+            </AnchorPane>
+        </Tab>
+        <Tab id="parameters-mitral-tab" text="Mitral">
+            <AnchorPane id="parameters-mitral-pane" prefHeight="500.0" prefWidth="800.0">
+                <ToolBar id="mitral-type-toolbar" layoutX="25.0" layoutY="25.0" prefHeight="40.0" prefWidth="638.0">
+                    <RadioButton id="mitral-type-native-input" prefWidth="200" text="Native"/>
+                    <RadioButton id="mitral-type-biological-input" prefWidth="200" text="Biological"/>
+                    <RadioButton id="mitral-type-artificial-input" prefWidth="200" text="Artificial"/>
+                </ToolBar>
+                <ToolBar id="mitral-leaflets-toolbar" layoutX="25.0" layoutY="70.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="mitral-leaflets-label" text="Platki"/>
+                    <ComboBox id="mitral-leaflets-input" prefWidth="150.0"/>
+                </ToolBar>
+                <ToolBar id="mitral-regurgiation-toolbar" layoutX="25.0" layoutY="115.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="mitral-regurgiation-label" text="Fala"/>
+                    <ComboBox id="mitral-regurgiation-input" prefWidth="150.0"/>
+                </ToolBar>
+                <ToolBar id="mitral-gradient-toolbar" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="mitral-gradient-label" text="Gradient"/>
+                    <TextField id="mitral-gradient-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="mitral-vc-toolbar" layoutX="25.0" layoutY="205.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="mitral-vc-label" text="VC"/>
+                    <TextField id="mitral-vc-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="mitral-rpisa-toolbar" layoutX="25.0" layoutY="250.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="mitral-rpisa-label" text="RPISA"/>
+                    <TextField id="mitral-rpisa-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="mitral-ero-toolbar" layoutX="25.0" layoutY="295.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="mitral-ero-label" text="ERO"/>
+                    <TextField id="mitral-ero-input" prefWidth="100"/>
+                </ToolBar>
+
+                <ToolBar id="mitral-dvi-toolbar" layoutX="25.0" layoutY="340.0" prefHeight="40.0" prefWidth="700.0">
+                    <Label id="mitral-dvi-dvi-label" text="DVI"/>
+                    <TextField id="mitral-dvi-dvi-input" prefWidth="100"/>
+                    <Label id="mitral-dvi-vtipr-label" text="VTIpr"/>
+                    <TextField id="mitral-dvi-vtipr-input" prefWidth="100"/>
+                    <Label id="mitral-dvi-vtilvot-label" text="VTIlvot"/>
+                    <TextField id="mitral-dvi-vtilvot-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="mitral-eoa-toolbar" layoutX="25.0" layoutY="385.0" prefHeight="40.0" prefWidth="700.0">
+                    <Label id="mitral-eoa-eoa-label" text="EOA"/>
+                    <TextField id="mitral-eoa-eoa-input" prefWidth="100"/>
+                    <Label id="mitral-eoa-vtipr-label" text="VTIpr"/>
+                    <TextField id="mitral-eoa-vtipr-input" prefWidth="100"/>
+                    <Label id="mitral-eoa-vtilvot-label" text="VTIlvot"/>
+                    <TextField id="mitral-eoa-vtilvot-label" prefWidth="100"/>
+                    <Label id="mitral-eoa-csalvot-label" text="CSAlvot"/>
+                    <TextField id="mitral-eoa-csalvot-input" prefWidth="100"/>
+                </ToolBar>
+
+                <ToolBar id="mitral-pht-toolbar" layoutX="25.0" layoutY="430.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="mitral-pht-label" text="PHT"/>
+                    <TextField id="mitral-pht-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="mitral-vmax-toolbar" layoutX="25.0" layoutY="475.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="mitral-vmax-label" text="Vmax"/>
+                    <TextField id="mitral-vmax-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="mitral-mva-toolbar" layoutX="25.0" layoutY="520.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="mitral-mva-label" text="MVA"/>
+                    <TextField id="mitral-mva-input" prefWidth="100"/>
+                </ToolBar>
+
+            </AnchorPane>
+        </Tab>
+        <Tab id="parameters-aortic-tab" text="Aortic">
+            <AnchorPane id="parameters-aortic-pane" prefHeight="500.0" prefWidth="800.0">
+                <ToolBar id="aortic-type-toolbar" layoutX="25.0" layoutY="25.0" prefHeight="40.0" prefWidth="638.0">
+                    <RadioButton id="aortic-type-native-input" prefWidth="200" text="Native"/>
+                    <RadioButton id="aortic-type-biological-input" prefWidth="200" text="Biological"/>
+                    <RadioButton id="aortic-type-artificial-input" prefWidth="200" text="Artificial"/>
+                </ToolBar>
+                <ToolBar id="aortic-leaflets-toolbar" layoutX="25.0" layoutY="70.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="aortic-leaflets-label" text="Platki"/>
+                    <ComboBox id="aortic-leaflets-input" prefWidth="150.0"/>
+                </ToolBar>
+                <ToolBar id="aortic-regurgiation-toolbar" layoutX="25.0" layoutY="115.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="aortic-regurgiation-label" text="Fala"/>
+                    <ComboBox id="aortic-regurgiation-input" prefWidth="150.0"/>
+                </ToolBar>
+                <ToolBar id="aortic-gradient-toolbar" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="aortic-gradient-label" text="Gradient"/>
+                    <TextField id="aortic-gradient-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="aortic-vc-toolbar" layoutX="25.0" layoutY="205.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="aortic-vc-label" text="VC"/>
+                    <TextField id="aortic-vc-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="aortic-ialvot-toolbar" layoutX="25.0" layoutY="250.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="aortic-ialvot-label" text="IA/LVOT"/>
+                    <TextField id="aortic-ialvot-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="aortic-pht-toolbar" layoutX="25.0" layoutY="295.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="aortic-pht-label" text="PHT"/>
+                    <TextField id="aortic-pht-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="aortic-rpisa-toolbar" layoutX="25.0" layoutY="340.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="aortic-rpisa-label" text="RPISA"/>
+                    <TextField id="aortic-rpisa-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="aoritc-ava-toolbar" layoutX="25.0" layoutY="385.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="aortic-ava-label" text="AVA"/>
+                    <TextField id="aortic-ava-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="aortic-vmax-toolbar" layoutX="25.0" layoutY="430.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="aortic-vmax-label" text="Vmax"/>
+                    <TextField id="aortic-vmax-input" prefWidth="100"/>
+                </ToolBar>
+
+                <ToolBar id="aortic-dvi-toolbar" layoutX="25.0" layoutY="475.0" prefHeight="40.0" prefWidth="700.0">
+                    <Label id="aortic-dvi-dvi-label" text="DVI"/>
+                    <TextField id="aortic-dvi-dvi-input" prefWidth="100"/>
+                    <Label id="aortic-dvi-vmaxlvot-label" text="VmaxLVOT"/>
+                    <TextField id="aortic-dvi-vmaxlvot-input" prefWidth="100"/>
+                    <Label id="aortic-dvi-vmaxpr-label" text="VmaxPR"/>
+                    <TextField id="aortic-dvi-vmaxpr-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="aortic-eoa-toolbar" layoutX="25.0" layoutY="520.0" prefHeight="40.0" prefWidth="700.0">
+                    <Label id="aortic-eoa-eoa-label" text="EOA"/>
+                    <TextField id="aortic-eoa-eoa-input" prefWidth="100"/>
+                    <Label id="aortic-eoa-csalvot-label" text="CSAlvot"/>
+                    <TextField id="aortic-eoa-csalvot-input" prefWidth="100"/>
+                    <Label id="aortic-eoa-vtilvot-label" text="VTIlvot"/>
+                    <TextField id="aortic-eoa-vtilvot-input" prefWidth="100"/>
+                    <Label id="aortic-eoa-csapr-label" text="CSApr"/>
+                    <TextField id="aortic-eoa-csapr-input" prefWidth="100"/>
+                </ToolBar>
+
+                <ToolBar id="aortic-at-toolbar" layoutX="25.0" layoutY="565.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="aortic-at-label" text="AT"/>
+                    <TextField id="aortic-at-input" prefWidth="100"/>
+                </ToolBar>
+            </AnchorPane>
+        </Tab>
+        <Tab id="parameters-tricuspid-tab" text="Tricuspid">
+            <AnchorPane id="parameters-tricuspid-tab" prefHeight="500.0" prefWidth="800.0">
+                <ToolBar id="tricuspid-type-toolbar" layoutX="25.0" layoutY="25.0" prefHeight="40.0" prefWidth="638.0">
+                    <RadioButton id="tricuspid-type-native-input" prefWidth="200" text="Native"/>
+                    <RadioButton id="tricuspid-type-biological-input" prefWidth="200" text="Biological"/>
+                    <RadioButton id="tricuspid-type-artificial-input" prefWidth="200" text="Artificial"/>
+                </ToolBar>
+                <ToolBar id="tricuspid-leaflets-toolbar" layoutX="25.0" layoutY="70.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="tricuspid-leaflets-label" text="Platki"/>
+                    <ComboBox id="tricuspid-leaflets-input" prefWidth="150.0"/>
+                </ToolBar>
+                <ToolBar id="tricuspid-regurgiation-toolbar" layoutX="25.0" layoutY="115.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="tricuspid-regurgiation-label" text="Fala"/>
+                    <ComboBox id="tricuspid-regurgiation-input" prefWidth="150.0"/>
+                </ToolBar>
+                <ToolBar id="tricuspid-gradient-toolbar" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="tricuspid-gradient-label" text="Gradient"/>
+                    <TextField id="tricuspid-gradient-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="tricuspid-rvsp-toolbar" layoutX="25.0" layoutY="205.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="tricuspid-rvsp-label" text="RVSP"/>
+                    <TextField id="tricuspid-rvsp-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="tricuspid-ivc-toolbar" layoutX="25.0" layoutY="250.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="tricuspid-ivc-label" text="IVC"/>
+                    <TextField id="tricuspid-ivc-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="tricuspid-tapse-toolbar" layoutX="25.0" layoutY="295.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="tricuspid-tapse-label" text="TAPSE"/>
+                    <TextField id="tricuspid-tapse-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="tricuspid-vc-toolbar" layoutX="25.0" layoutY="340.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="tricuspid-vc-label" text="VC"/>
+                    <TextField id="tricuspid-vc-input" prefWidth="100"/>
+                </ToolBar>
+            </AnchorPane>
+        </Tab>
+        <Tab id="parameters-pulmonary-tab" text="Pulmonary">
+            <AnchorPane id="parameters-pulmonary-pane" prefHeight="500.0" prefWidth="800.0">
+                <ToolBar id="pulmonary-type-toolbar" layoutX="25.0" layoutY="25.0" prefHeight="40.0" prefWidth="638.0">
+                    <RadioButton id="pulmonary-type-native-input" prefWidth="200" text="Native"/>
+                    <RadioButton id="pulmonary-type-biological-input" prefWidth="200" text="Biological"/>
+                    <RadioButton id="pulmonary-type-artificial-input" prefWidth="200" text="Artificial"/>
+                </ToolBar>
+                <ToolBar id="pulmonary-leaflets-toolbar" layoutX="25.0" layoutY="70.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="pulmonary-leaflets-label" text="Platki"/>
+                    <ComboBox id="pulmonary-leaflets-input" prefWidth="150.0"/>
+                </ToolBar>
+                <ToolBar id="pulmonary-regurgiation-toolbar" layoutX="25.0" layoutY="115.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="pulmonary-regurgiation-label" text="Fala"/>
+                    <ComboBox id="pulmonary-regurgiation-input" prefWidth="150.0"/>
+                </ToolBar>
+                <ToolBar id="pulmonary-gradient-toolbar" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="pulmonary-gradient-label" text="Gradient"/>
+                    <TextField id="pulmonary-gradient-input" prefWidth="100"/>
+                </ToolBar>
+                <ToolBar id="pulmonary-act-toolbar" layoutX="25.0" layoutY="205.0" prefHeight="40.0" prefWidth="200.0">
+                    <Label id="pulmonary-act-label" text="ACT"/>
+                    <TextField id="pulmonary-act-input" prefWidth="100"/>
+                </ToolBar>
+            </AnchorPane>
+        </Tab>
+    </TabPane>
+    </AnchorPane>
+    <AnchorPane id="basic-data-pane" layoutX="25.0" layoutY="30.0" prefHeight="40.0" prefWidth="750.0">
+        <ToolBar id="patient-toolbar" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" prefWidth="250">
+            <Label id="patient-label" text="patient"/>
+            <TextField id="patient-input" prefWidth="100"/>
+        </ToolBar>
+        <ToolBar id="patient-id-toolbar" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" prefWidth="250">
+            <Label id="patient-id-label" text="PESEL"/>
+            <TextField id="patient-id-input" prefWidth="100"/>
+        </ToolBar>
+        <ToolBar id="date-toolbar" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" prefWidth="250">
+            <Label id="date-label" text="Date"/>
+            <DatePicker id="date-input"/>
+        </ToolBar>
+    </AnchorPane>
+    <AnchorPane id="description-pane" layoutX="800.0" layoutY="100.0" prefHeight="750" prefWidth="350">
+        <TextArea id="description-input" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" prefHeight="500"/>
+        <ToolBar id="description-toolbar" layoutY="510.0">
+            <Button id="description-save-button" text="Save"/>
+            <Button id="description-preview-button" text="Preview"/>
+            <Button id="description-generate-button" text="Generate"/>
+        </ToolBar>
+    </AnchorPane>
+</AnchorPane>
