@@ -1,7 +1,10 @@
 package heart.components.valve.valves;
 
+import heart.components.valve.leaflets.LeafletsType;
+import heart.components.valve.leaflets.leaflets.PulmonaryValveLeaflets;
 import heart.parameters.FixedSizeNumericParameter;
 import heart.parameters.NumericParameter;
+import heart.parameters.exceptions.IncorrectTypeException;
 import heart.parameters.exceptions.ParameterException;
 import heart.components.valve.leaflets.leaflets.MitralValveLeaflets;
 import java.util.List;
@@ -25,7 +28,12 @@ public class MitralValve extends Valve {
 
     public MitralValve() {
         super();
-        this.setLeafletsType(MitralValveLeaflets.RIGHT);
+        try {
+            this.setLeafletsType(MitralValveLeaflets.RIGHT);
+        }
+        catch(ParameterException e) {
+            //wont be thrown
+        }
 
         this.mapse = new FixedSizeNumericParameter(1, "mm");
         this.mva = new FixedSizeNumericParameter(1, "cm^2");
@@ -138,5 +146,13 @@ public class MitralValve extends Valve {
 
     public void setVmax(List<Double> vmax) throws ParameterException {
         this.vmax.setParameters(vmax);
+    }
+
+    @Override
+    public void setLeafletsType(LeafletsType leafletsType) throws ParameterException {
+        if(!(leafletsType instanceof MitralValveLeaflets)) {
+            throw new IncorrectTypeException();
+        }
+        super.setLeafletsType(leafletsType);
     }
 }

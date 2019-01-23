@@ -1,8 +1,11 @@
 package heart.components.valve.valves;
 
+import heart.components.valve.leaflets.LeafletsType;
+import heart.components.valve.leaflets.leaflets.PulmonaryValveLeaflets;
 import heart.parameters.BoundedSizeNumericParameter;
 import heart.parameters.FixedSizeNumericParameter;
 import heart.parameters.NumericParameter;
+import heart.parameters.exceptions.IncorrectTypeException;
 import heart.parameters.exceptions.ParameterException;
 import heart.components.valve.leaflets.leaflets.TricuspidValveLeaflets;
 
@@ -17,8 +20,12 @@ public class TricuspidValve extends Valve {
     public TricuspidValve() {
 
         super();
-
-        this.setLeafletsType(TricuspidValveLeaflets.RIGHT);
+        try {
+            this.setLeafletsType(TricuspidValveLeaflets.RIGHT);
+        }
+        catch(ParameterException e) {
+            //wont be thrown
+        }
 
         this.rvsp = new FixedSizeNumericParameter(1, "mmHg");
         this.ivc = new BoundedSizeNumericParameter(1, 2, "mm");
@@ -56,5 +63,13 @@ public class TricuspidValve extends Valve {
 
     public void setVc(List<Double> vc) throws ParameterException {
         this.vc.setParameters(vc);
+    }
+
+    @Override
+    public void setLeafletsType(LeafletsType leafletsType) throws ParameterException {
+        if(!(leafletsType instanceof TricuspidValveLeaflets)) {
+            throw new IncorrectTypeException();
+        }
+        super.setLeafletsType(leafletsType);
     }
 }

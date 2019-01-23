@@ -49,7 +49,7 @@ public abstract class Valve {
         return leafletsType;
     }
 
-    public void setLeafletsType(LeafletsType leafletsType) {
+    public void setLeafletsType(LeafletsType leafletsType) throws ParameterException {
         this.leafletsType = leafletsType;
     }
 }

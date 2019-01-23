@@ -1,7 +1,10 @@
 package heart.components.valve.valves;
 
+import heart.components.valve.leaflets.LeafletsType;
+import heart.components.valve.leaflets.leaflets.PulmonaryValveLeaflets;
 import heart.parameters.FixedSizeNumericParameter;
 import heart.parameters.NumericParameter;
+import heart.parameters.exceptions.IncorrectTypeException;
 import heart.parameters.exceptions.ParameterException;
 import heart.components.valve.leaflets.leaflets.AorticValveLeaflets;
 import java.util.List;
@@ -28,8 +31,12 @@ public class AorticValve extends Valve {
 
     public AorticValve() {
         super();
-
-        this.setLeafletsType(AorticValveLeaflets.RIGHT);
+        try {
+            this.setLeafletsType(AorticValveLeaflets.RIGHT);
+        }
+        catch(ParameterException e) {
+            //wont be thrown
+        }
 
         this.vc = new FixedSizeNumericParameter(1, "mm");
         this.iaLvot = new FixedSizeNumericParameter(1, "%");
@@ -160,5 +167,13 @@ public class AorticValve extends Valve {
 
     public void setAt(List<Double> at) throws ParameterException {
         this.at.setParameters(at);
+    }
+
+    @Override
+    public void setLeafletsType(LeafletsType leafletsType) throws ParameterException {
+        if(!(leafletsType instanceof AorticValveLeaflets)) {
+            throw new IncorrectTypeException();
+        }
+        super.setLeafletsType(leafletsType);
     }
 }
