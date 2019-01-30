@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane id="parametersPane" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.parameters.ParametersController">
+    <TabPane id="parametersTabPane" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"  style="FxBackgroundColor: gray;" tabClosingPolicy="UNAVAILABLE">
+        <Tab id="parametersGeneralTab" fx:id="parametersGeneralTab">
+            <AnchorPane id="parametersGeneralPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <ToolBar id="leftVentricleToolbar" layoutX="25.0" layoutY="25.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="generalLeftVentricleLabel" fx:id="generalLeftVentricleLabel"/>
+                    <TextField id="leftVentricleInput" prefWidth="100.0" fx:id="leftVentricleInput"/>
+                </ToolBar>
+                <ToolBar id="generalRightVentricleToolbar" layoutX="25.0" layoutY="70.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="generalRightVentricleLabel" fx:id="generalRightVentricleLabel"/>
+                    <TextField id="generalRightVentricleInput" prefWidth="100.0" fx:id="generalRightVentricleInput"/>
+                </ToolBar>
+                <ToolBar id="generalInterventricualarSeptumToolbar" layoutX="25.0" layoutY="115.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="generalInterventricularSeptumLabel" fx:id="generalInterventricularSeptumLabel"/>
+                    <TextField id="generalInterventricularSeptumInput" prefWidth="100.0" fx:id="generalInterventricularSeptumInput"/>
+                </ToolBar>
+                <ToolBar id="generalBackWallToolbar" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="generalBackWallLabel" fx:id="generalBackWallLabel"/>
+                    <TextField id="generalBackWallInput" prefWidth="100.0" fx:id="generalBackWallInput"/>
+                </ToolBar>
+                <ToolBar id="generalLeftAutriumToolbar" layoutX="25.0" layoutY="205.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="generalLeftAutriumLabel" fx:id="generalLeftAutriumLabel"/>
+                    <TextField id="generalLeftAutriumInput" prefWidth="100.0" fx:id="generalLeftAutriumInput"/>
+                </ToolBar>
+                <ToolBar id="generalRightAutriumToolbar" layoutX="25.0" layoutY="250.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="generalRightAutriumLabel" fx:id="generalRightAutriumLabel"/>
+                    <TextField id="generalRightAutriumInput" prefWidth="100.0" fx:id="generalRightAutriumInput" />
+                </ToolBar>
+                <ToolBar id="generalAscendingAortaToolbar" layoutX="25.0" layoutY="295.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="generalAscendingAortaLabel" fx:id="generalAscendingAortaLabel"/>
+                    <TextField id="generalAscendingAortaInput" prefWidth="100.0" fx:id="generalAscendingAortaInput" />
+                </ToolBar>
+                <ToolBar id="generalPulmonaryTrunkToolbar" layoutX="25.0" layoutY="340.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="generalPulmonaryTrunkLabel" fx:id="generalPulmonaryTrunkLabel"/>
+                    <TextField id="generalTrunkInput" prefWidth="100.0" fx:id="generalTrunkInput"/>
+                </ToolBar>
+                <ToolBar id="generalEfToolbar" layoutX="25.0" layoutY="385.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="generalEfLabel" fx:id="generalEfLabel"/>
+                    <TextField id="generalEfInput" prefWidth="100.0" fx:id="generalEfInput" />
+                </ToolBar>
+                <ToolBar id="generalEaToolbar" layoutX="25.0" layoutY="430.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="generalEaLabel" fx:id="generalEaLabel"/>
+                    <TextField id="generalEaInput" prefWidth="100.0" fx:id="generalEaInput" />
+                </ToolBar>
+                <ToolBar id="generalDtToolbar" layoutX="25.0" layoutY="475.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="generalDtLabel" fx:id="generalDtLabel"/>
+                    <TextField id="generalDtInput" prefWidth="100.0" fx:id="generalDtInput"/>
+                </ToolBar>
+                <ToolBar id="generalPericardiumToolbar" layoutX="25.0" layoutY="520.0" prefHeight="40.0" prefWidth="300.0">
+                    <ImageView id="generalPericariumTypeLabel" fx:id="generalPericariumTypeLabel"/>
+                    <ComboBox id="generalPericardiumTypeInput" prefWidth="100.0" fx:id="generalPericardiumTypeInput"/>
+                    <ImageView id="generalPericardiumAmountLabel" fx:id="generalPericardiumAmountLabel"/>
+                    <TextField id="generalPericardiumAmountInput" prefWidth="100.0" fx:id="generalPericardiumAmountInput"/>
+                </ToolBar>
+            </AnchorPane>
+        </Tab>
+        <Tab id="parametersMitralTab" fx:id="parametersMitralTab">
+            <AnchorPane id="parametersMitralPane" prefHeight="500.0" prefWidth="800.0">
+                <ToolBar id="mitralTypeToolbar" layoutX="25.0" layoutY="25.0" prefHeight="40.0" prefWidth="638.0">
+                    <RadioButton id="mitralTypeNativeInput" prefWidth="200" fx:id="mitralTypeNativeInput"/>
+                    <RadioButton id="mitralTypeBiologicalInput" prefWidth="200" fx:id="mitralTypeBiologicalInput"/>
+                    <RadioButton id="mitralTypeArtificialInput" prefWidth="200" fx:id="mitralTypeArtificialInput"/>
+                </ToolBar>
+                <ToolBar id="mitralLeafletsToolbar" layoutX="25.0" layoutY="70.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="mitralLeafletsLabel" fx:id="mitralLeafletsLabel"/>
+                    <ComboBox id="mitralLeafletsInput" prefWidth="150.0" fx:id="mitralLeafletsInput"/>
+                </ToolBar>
+                <ToolBar id="mitralRegurgiationToolbar" layoutX="25.0" layoutY="115.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="mitralRegurgiationLabel" fx:id="mitralRegurgiationLabel"/>
+                    <ComboBox id="mitralRegurgiationInput" prefWidth="150.0" fx:id="mitralRegurgiationInput"/>
+                </ToolBar>
+                <ToolBar id="mitralGradientToolbar" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="mitralGradientLabel" fx:id="mitralGradientLabel"/>
+                    <TextField id="mitralGradientInput" prefWidth="100" fx:id="mitralGradientInput"/>
+                </ToolBar>
+                <ToolBar id="mitralVcToolbar" layoutX="25.0" layoutY="205.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="mitralVcLabel" fx:id="mitralVcLabel"/>
+                    <TextField id="mitralVcInput" prefWidth="100" fx:id="mitralVcInput"/>
+                </ToolBar>
+                <ToolBar id="mitralRpisaToolbar" layoutX="25.0" layoutY="250.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="mitralRpisaLabel" fx:id="mitralRpisaLabel"/>
+                    <TextField id="mitralRpisaInput" prefWidth="100" fx:id="mitralRpisaInput"/>
+                </ToolBar>
+                <ToolBar id="mitralEroToolbar" layoutX="25.0" layoutY="295.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="mitralEroLabel" fx:id="mitralEroLabel"/>
+                    <TextField id="mitralEroInput" prefWidth="100" fx:id="mitralEroInput"/>
+                </ToolBar>
+
+                <ToolBar id="mitralDviToolbar" layoutX="25.0" layoutY="340.0" prefHeight="40.0" prefWidth="700.0">
+                    <ImageView id="mitralDviDviLabel" fx:id="mitralDviDviLabel"/>
+                    <TextField id="mitralDviDviInput" prefWidth="100" fx:id="mitralDviDviInput"/>
+                    <ImageView id="mitralDviVtiprLabel" fx:id="mitralDviVtiprLabel"/>
+                    <TextField id="mitralDviVtiprInput" prefWidth="100" fx:id="mitralDviVtiprInput"/>
+                    <ImageView id="mitralDviVtilvotLabel" fx:id="mitralDviVtilvotLabel"/>
+                    <TextField id="mitralDviVtilvotInput" prefWidth="100" fx:id="mitralDviVtilvotInput"/>
+                </ToolBar>
+                <ToolBar id="mitralEoaToolbar" layoutX="25.0" layoutY="385.0" prefHeight="40.0" prefWidth="700.0">
+                    <ImageView id="mitralEoaEoaLabel" fx:id="mitralEoaEoaLabel"/>
+                    <TextField id="mitralEoaEoaInput" prefWidth="100" fx:id="mitralEoaEoaInput"/>
+                    <ImageView id="mitralEoaVtiprLabel" fx:id="mitralEoaVtiprLabel"/>
+                    <TextField id="mitralEoaVtiprInput" prefWidth="100" fx:id="mitralEoaVtiprInput"/>
+                    <ImageView id="mitralEoaVtilvotLabel" fx:id="mitralEoaVtilvotLabel"/>
+                    <TextField id="mitralEoaVtilvotLabel" prefWidth="100"/>
+                    <ImageView id="mitralEoaCsalvotLabel" fx:id="mitralEoaCsalvotLabel"/>
+                    <TextField id="mitralEoaCsalvotInput" prefWidth="100" fx:id="mitralEoaCsalvotInput"/>
+                </ToolBar>
+
+                <ToolBar id="mitralPhtToolbar" layoutX="25.0" layoutY="430.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="mitralPhtLabel" fx:id="mitralPhtLabel"/>
+                    <TextField id="mitralPhtInput" prefWidth="100" fx:id="mitralPhtInput"/>
+                </ToolBar>
+                <ToolBar id="mitralVmaxToolbar" layoutX="25.0" layoutY="475.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="mitralVmaxLabel" fx:id="mitralVmaxLabel"/>
+                    <TextField id="mitralVmaxInput" prefWidth="100" fx:id="mitralVmaxInput"/>
+                </ToolBar>
+                <ToolBar id="mitralMvaToolbar" layoutX="25.0" layoutY="520.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="mitralMvaLabel" fx:id="mitralMvaLabel"/>
+                    <TextField id="mitralMvaInput" prefWidth="100" fx:id="mitralMvaInput"/>
+                </ToolBar>
+            </AnchorPane>
+        </Tab>
+        <Tab id="parametersAorticTab" fx:id="parametersAorticTab">
+            <AnchorPane id="parametersAorticPane" prefHeight="500.0" prefWidth="800.0">
+                <ToolBar id="aorticTypeToolbar" layoutX="25.0" layoutY="25.0" prefHeight="40.0" prefWidth="638.0">
+                    <RadioButton id="aorticTypeNativeInput" prefWidth="200" fx:id="aorticTypeNativeInput"/>
+                    <RadioButton id="aorticTypeBiologicalInput" prefWidth="200" fx:id="aorticTypeBiologicalInput"/>
+                    <RadioButton id="aorticTypeArtificialInput" prefWidth="200" fx:id="aorticTypeArtificialInput"/>
+                </ToolBar>
+                <ToolBar id="aorticLeafletsToolbar" layoutX="25.0" layoutY="70.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="aorticLeafletsLabel" fx:id="aorticLeafletsLabel"/>
+                    <ComboBox id="aorticLeafletsInput" prefWidth="150.0" fx:id="aorticLeafletsInput"/>
+                </ToolBar>
+                <ToolBar id="aorticRegurgiationToolbar" layoutX="25.0" layoutY="115.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="aorticRegurgiationLabel" fx:id="aorticRegurgiationLabel"/>
+                    <ComboBox id="aorticRegurgiationInput" prefWidth="150.0" fx:id="aorticRegurgiationInput"/>
+                </ToolBar>
+                <ToolBar id="aorticGradientToolbar" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="aorticGradientLabel" fx:id="aorticGradientLabel"/>
+                    <TextField id="aorticGradientInput" prefWidth="100" fx:id="aorticGradientInput"/>
+                </ToolBar>
+                <ToolBar id="aorticVcToolbar" layoutX="25.0" layoutY="205.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="aorticVcLabel" fx:id="aorticVcLabel"/>
+                    <TextField id="aorticVcInput" prefWidth="100" fx:id="aorticVcInput"/>
+                </ToolBar>
+                <ToolBar id="aorticIalvotToolbar" layoutX="25.0" layoutY="250.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="aorticIalvotLabel" fx:id="aorticIalvotLabel"/>
+                    <TextField id="aorticIalvotInput" prefWidth="100" fx:id="aorticIalvotInput"/>
+                </ToolBar>
+                <ToolBar id="aorticPhtToolbar" layoutX="25.0" layoutY="295.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="aorticPhtLabel" fx:id="aorticPhtLabel"/>
+                    <TextField id="aorticPhtInput" prefWidth="100" fx:id="aorticPhtInput"/>
+                </ToolBar>
+                <ToolBar id="aorticRpisaToolbar" layoutX="25.0" layoutY="340.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="aorticRpisaLabel" fx:id="aorticRpisaLabel"/>
+                    <TextField id="aorticRpisaInput" prefWidth="100" fx:id="aorticRpisaInput"/>
+                </ToolBar>
+                <ToolBar id="aorticAvaToolbar" layoutX="25.0" layoutY="385.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="aorticAvaLabel" fx:id="aorticAvaLabel"/>
+                    <TextField id="aorticAvaInput" prefWidth="100" fx:id="aorticAvaInput"/>
+                </ToolBar>
+                <ToolBar id="aorticVmaxToolbar" layoutX="25.0" layoutY="430.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="aorticVmaxLabel" fx:id="aorticVmaxLabel"/>
+                    <TextField id="aorticVmaxInput" prefWidth="100" fx:id="aorticVmaxInput"/>
+                </ToolBar>
+
+                <ToolBar id="aorticDviToolbar" layoutX="25.0" layoutY="475.0" prefHeight="40.0" prefWidth="700.0">
+                    <ImageView id="aorticDviDviLabel" fx:id="aorticDviDviLabel"/>
+                    <TextField id="aorticDviDviInput" prefWidth="100" fx:id="aorticDviDviInput"/>
+                    <ImageView id="aorticDviVmaxlvotLabel" fx:id="aorticDviVmaxlvotLabel"/>
+                    <TextField id="aorticDviVmaxlvotInput" prefWidth="100" fx:id="aorticDviVmaxlvotInput"/>
+                    <ImageView id="aorticDviVmaxprLabel" fx:id="aorticDviVmaxprLabel"/>
+                    <TextField id="aorticDviVmaxprInput" prefWidth="100" fx:id="aorticDviVmaxprInput"/>
+                </ToolBar>
+                <ToolBar id="aorticEoaToolbar" layoutX="25.0" layoutY="520.0" prefHeight="40.0" prefWidth="700.0">
+                    <ImageView id="aorticEoaEoaLabel" fx:id="aorticEoaEoaLabel"/>
+                    <TextField id="aorticEoaEoaInput" prefWidth="100" fx:id="aorticEoaEoaInput"/>
+                    <ImageView id="aorticEoaCsalvotLabel" fx:id="aorticEoaCsalvotLabel"/>
+                    <TextField id="aorticEoaCsalvotInput" prefWidth="100" fx:id="aorticEoaCsalvotInput"/>
+                    <ImageView id="aorticEoaVtilvotLabel" fx:id="aorticEoaVtilvotLabel"/>
+                    <TextField id="aorticEoaVtilvotInput" prefWidth="100" fx:id="aorticEoaVtilvotInput"/>
+                    <ImageView id="aorticEoaCsaprLabel" fx:id="aorticEoaCsaprLabel"/>
+                    <TextField id="aorticEoaCsaprInput" prefWidth="100" fx:id="aorticEoaCsaprInput"/>
+                </ToolBar>
+
+                <ToolBar id="aorticAtToolbar" layoutX="25.0" layoutY="565.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="aorticAtLabel" fx:id="aorticAtLabel"/>
+                    <TextField id="aorticAtInput" prefWidth="100" fx:id="aorticAtInput"/>
+                </ToolBar>
+            </AnchorPane>
+        </Tab>
+        <Tab id="parametersTricuspidTab" fx:id="parametersTricuspidTab">
+            <AnchorPane id="parametersTricuspidTab" prefHeight="500.0" prefWidth="800.0">
+                <ToolBar id="tricuspidTypeToolbar" layoutX="25.0" layoutY="25.0" prefHeight="40.0" prefWidth="638.0">
+                    <RadioButton id="tricuspidTypeNativeInput" prefWidth="200" fx:id="tricuspidTypeNativeInput"/>
+                    <RadioButton id="tricuspidTypeBiologicalInput" prefWidth="200" fx:id="tricuspidTypeBiologicalInput"/>
+                    <RadioButton id="tricuspidTypeArtificialInput" prefWidth="200" fx:id="tricuspidTypeArtificialInput"/>
+                </ToolBar>
+                <ToolBar id="tricuspidLeafletsToolbar" layoutX="25.0" layoutY="70.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="tricuspidLeafletsLabel" fx:id="tricuspidLeafletsLabel"/>
+                    <ComboBox id="tricuspidLeafletsInput" prefWidth="150.0" fx:id="tricuspidLeafletsInput"/>
+                </ToolBar>
+                <ToolBar id="tricuspidRegurgiationToolbar" layoutX="25.0" layoutY="115.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="tricuspidRegurgiationLabel" fx:id="tricuspidRegurgiationLabel"/>
+                    <ComboBox id="tricuspidRegurgiationInput" prefWidth="150.0" fx:id="tricuspidRegurgiationInput"/>
+                </ToolBar>
+                <ToolBar id="tricuspidGradientToolbar" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="tricuspidGradientLabel" fx:id="tricuspidGradientLabel"/>
+                    <TextField id="tricuspidGradientInput" prefWidth="100" fx:id="tricuspidGradientInput"/>
+                </ToolBar>
+                <ToolBar id="tricuspidRvspToolbar" layoutX="25.0" layoutY="205.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="tricuspidRvspLabel" fx:id="tricuspidRvspLabel"/>
+                    <TextField id="tricuspidRvspInput" prefWidth="100" fx:id="tricuspidRvspInput"/>
+                </ToolBar>
+                <ToolBar id="tricuspidIvcToolbar" layoutX="25.0" layoutY="250.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="tricuspidIvcLabel" fx:id="tricuspidIvcLabel"/>
+                    <TextField id="tricuspidIvcInput" prefWidth="100" fx:id="tricuspidIvcInput"/>
+                </ToolBar>
+                <ToolBar id="tricuspidTapseToolbar" layoutX="25.0" layoutY="295.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="tricuspidTapseLabel" fx:id="tricuspidTapseLabel"/>
+                    <TextField id="tricuspidTapseInput" prefWidth="100" fx:id="tricuspidTapseInput"/>
+                </ToolBar>
+                <ToolBar id="tricuspidVcToolbar" layoutX="25.0" layoutY="340.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="tricuspidVcLabel" fx:id="tricuspidVcLabel"/>
+                    <TextField id="tricuspidVcInput" prefWidth="100" fx:id="tricuspidVcInput"/>
+                </ToolBar>
+            </AnchorPane>
+        </Tab>
+        <Tab id="parametersPulmonaryTab" fx:id="parametersPulmonaryTab">
+            <AnchorPane id="parametersPulmonaryPane" prefHeight="500.0" prefWidth="800.0">
+                <ToolBar id="pulmonaryTypeToolbar" layoutX="25.0" layoutY="25.0" prefHeight="40.0" prefWidth="638.0">
+                    <RadioButton id="pulmonaryTypeNativeInput" prefWidth="200" fx:id="pulmonaryTypeNativeInput"/>
+                    <RadioButton id="pulmonaryTypeBiologicalInput" prefWidth="200" fx:id="pulmonaryTypeBiologicalInput"/>
+                    <RadioButton id="pulmonaryTypeArtificialInput" prefWidth="200" fx:id="pulmonaryTypeArtificialInput"/>
+                </ToolBar>
+                <ToolBar id="pulmonaryLeafletsToolbar" layoutX="25.0" layoutY="70.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="pulmonaryLeafletsLabel" fx:id="pulmonaryLeafletsLabel"/>
+                    <ComboBox id="pulmonaryLeafletsInput" prefWidth="150.0" fx:id="pulmonaryLeafletsInput"/>
+                </ToolBar>
+                <ToolBar id="pulmonaryRegurgiationToolbar" layoutX="25.0" layoutY="115.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="pulmonaryRegurgiationLabel" fx:id="pulmonaryRegurgiationLabel"/>
+                    <ComboBox id="pulmonaryRegurgiationInput" prefWidth="150.0" fx:id="pulmonaryRegurgiationInput"/>
+                </ToolBar>
+                <ToolBar id="pulmonaryGradientToolbar" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="pulmonaryGradientLabel" fx:id="pulmonaryGradientLabel"/>
+                    <TextField id="pulmonaryGradientInput" prefWidth="100" fx:id="pulmonaryGradientInput"/>
+                </ToolBar>
+                <ToolBar id="pulmonaryActToolbar" layoutX="25.0" layoutY="205.0" prefHeight="40.0" prefWidth="200.0">
+                    <ImageView id="pulmonaryActLabel" fx:id="pulmonaryActLabel"/>
+                    <TextField id="pulmonaryActInput" prefWidth="100" fx:id="pulmonaryActInput"/>
+                </ToolBar>
+            </AnchorPane>
+        </Tab>
+    </TabPane>
+</AnchorPane>
