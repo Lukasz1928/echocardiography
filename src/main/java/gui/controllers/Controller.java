@@ -1,6 +1,6 @@
 package gui.controllers;
 
-import gui.utils.LatexRenderer;
+import gui.utils.latex_renderer.LatexRenderer;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.RadioButton;

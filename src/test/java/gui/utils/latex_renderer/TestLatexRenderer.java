@@ -3,7 +3,6 @@ package gui.utils.latex_renderer;
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
-import gui.utils.LatexRenderer;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -77,7 +76,7 @@ public class TestLatexRenderer {
             BufferedImage expected = ImageUtils.readImage(expectedImagePath);
             ImageUtils.assertImagesEqual(img, expected);
         }
-        catch(IOException| IllegalArgumentException e) {
+        catch(Exception e) {
             Assert.fail();
         }
     }
@@ -93,10 +92,26 @@ public class TestLatexRenderer {
 
     @Test
     @UseDataProvider("subscriptTextDataProvider")
-    public void testSubstript(String latex, String name) {
+    public void testSubscript(String latex, String name) {
         String expectedImagePath = String.format("gui/utils/latex_renderer/position/subscript/%s.png", name);
         this.assertCorrectImage(latex, expectedImagePath);
     }
+
+//    @DataProvider
+//    public static Object[][] superscriptTextDataProvider() {
+//        return new Object[][]{
+//                {"{aaa}^{bbb}", "aaa_bbb"},
+//                {"^{aaa}", "_aaa"},
+//                {"{aaa}^{bbb}^{ccc}", "aaa_bbb_ccc"}
+//        };
+//    }
+//
+//    @Test
+//    @UseDataProvider("superscriptTextDataProvider")
+//    public void testSuperscript(String latex, String name) {
+//        String expectedImagePath = String.format("gui/utils/latex_renderer/position/superscript/%s.png", name);
+//        this.assertCorrectImage(latex, expectedImagePath);
+//    }
 
     private void assertCorrectImage(String latex, String expectedImagePath) {
         try {
@@ -104,7 +119,7 @@ public class TestLatexRenderer {
             BufferedImage expected = ImageUtils.readImage(expectedImagePath);
             ImageUtils.assertImagesEqual(img, expected);
         }
-        catch(IOException| IllegalArgumentException e) {
+        catch(Exception e) {
             Assert.fail();
         }
     }

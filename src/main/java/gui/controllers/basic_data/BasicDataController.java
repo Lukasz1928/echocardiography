@@ -1,6 +1,7 @@
 package gui.controllers.basic_data;
 
-import gui.utils.LatexRenderer;
+import gui.utils.latex_renderer.FormatException;
+import gui.utils.latex_renderer.LatexRenderer;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
@@ -43,10 +44,14 @@ public class BasicDataController {
 
     private void setupLabels() {
         LatexRenderer lr = new LatexRenderer();
-
-        this.patientLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("patient-data")));
-        this.patientIdLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("patient-id")));
-        this.dateLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("patient-id")));
+        try {
+            this.patientLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("patient-data")));
+            this.patientIdLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("patient-id")));
+            this.dateLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("patient-id")));
+        }
+        catch(FormatException e) {
+            //
+        }
     }
 
 }

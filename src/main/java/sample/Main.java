@@ -1,17 +1,11 @@
 package sample;
 
-import gui.utils.LatexRenderer;
-import javafx.application.Application;
+import gui.utils.latex_renderer.FormatException;
+import gui.utils.latex_renderer.LatexRenderer;
 import javafx.embed.swing.SwingFXUtils;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.util.Locale;
-import java.util.ResourceBundle;
 
 public class Main {
 
@@ -25,16 +19,19 @@ public class Main {
 //    }
 
     public static void main(String[] args) {
-
-        LatexRenderer lr = new LatexRenderer();
-
-        File outputfile = new File("aaa_bbb_ccc.png");
-        BufferedImage image = SwingFXUtils.fromFXImage(lr.latexToImage("{aaa}^{bbb}^{bbb}^{ddd}^{ggg}", 15), null);
         try {
-            ImageIO.write(image, "png", outputfile);
+            LatexRenderer lr = new LatexRenderer();
+
+            File outputfile = new File("aaa_bbb_ccc.png");
+            BufferedImage image = SwingFXUtils.fromFXImage(lr.latexToImage("{aaa}_{bbb}_{bbb}"), null);
+            try {
+                ImageIO.write(image, "png", outputfile);
+            } catch(Exception e) {
+                System.out.println("dupa1");
+            }
         }
-        catch(Exception e) {
-            //
+        catch(FormatException e) {
+            System.out.println(e.getMessage());
         }
         //launch(args);
     }
