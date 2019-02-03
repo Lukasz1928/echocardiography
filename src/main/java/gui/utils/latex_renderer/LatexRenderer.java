@@ -14,19 +14,24 @@ import java.util.List;
 public class LatexRenderer {
     public WritableImage latexToImage(String latex, int size) throws FormatException {
         StringBuilder formattedLatexBuilder = new StringBuilder();
-        if(latex.matches("(\\w\\s?)*")) {
+        if(latex.matches("([^{}_^]*\\s?)*")) {
             formattedLatexBuilder.append(String.format("\\text{%s}", latex));
         }
         else {
-            String splitRegex = "(?=([_^]))";
+            String splitRegex = "((?=([_^]\\{))|((?<=(\\})(?=(\\{)))))";
             List<String> tokens = new ArrayList<>(Arrays.asList(latex.split(splitRegex)));
-            List<TextGroup> groups = this.calculateTextGroups(tokens);
+            List<TextGroup> groups;
+            try {
+                groups = this.calculateTextGroups(tokens);
+            }
+            catch(StringIndexOutOfBoundsException e) {
+                throw new FormatException();
+            }
             for(TextGroup group : groups) {
                 formattedLatexBuilder.append(group);
             }
         }
         String formattedLatex = formattedLatexBuilder.toString();
-        System.out.println(formattedLatex);
         TeXFormula formula = new TeXFormula(formattedLatex);
         TeXIcon icon = formula.new TeXIconBuilder().setStyle(TeXConstants.STYLE_TEXT).setSize(size).build();
         BufferedImage image = new BufferedImage(icon.getIconWidth(), icon.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
@@ -58,24 +63,24 @@ public class LatexRenderer {
 
     private List<TextGroup> calculateTextGroups(List<String> tokens) throws FormatException {
         List<TextGroup> groups = new ArrayList<>();
-        System.out.println(tokens);
         try {
             for(String token : tokens) {
-                if(token.matches("[a-zA-Z{].*")) {
+                if(token.matches("\\{[^{}_^]*\\}")) {
                     groups.add(new TextGroup());
                     groups.get(groups.size() - 1).base += token.substring(token.indexOf('{') + 1, token.lastIndexOf('}'));
                 }
-                else if(token.startsWith("^")) {
+                else if(token.matches("\\^\\{[^{}_^]*\\}")) {
                     groups.get(groups.size() - 1).superscript += token.substring(token.indexOf('{') + 1, token.lastIndexOf('}'));
                 }
-                else if(token.startsWith("_")) {
+                else if(token.matches("_\\{[^{}_^]*\\}")) {
                     groups.get(groups.size() - 1).subscript += token.substring(token.indexOf('{') + 1, token.lastIndexOf('}'));
                 }
                 else {
-                    throw new FormatException(token);
+                    throw new FormatException();
                 }
             }
-        } catch(ArrayIndexOutOfBoundsException e) {
+        }
+        catch(ArrayIndexOutOfBoundsException e) {
             throw new FormatException();
         }
         return groups;
