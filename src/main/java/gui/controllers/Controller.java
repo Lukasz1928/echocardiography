@@ -52,9 +52,8 @@ public class Controller {
 
         LatexRenderer lr = new LatexRenderer();
 
-        String latex = "{ABC}_{DEF}^{XYZ}";
-
-        //this.aaaa.setImage(lr.latexToImage(latex, 15));
+        String latex = "{ABC}_{DEF}_{XYZ}";
+        
     }
 
 

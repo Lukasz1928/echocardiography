@@ -40,6 +40,10 @@ public class LatexRenderer {
         return SwingFXUtils.toFXImage(image, null);
     }
 
+    public WritableImage latexToImage(String latex) throws FormatException {
+        return this.latexToImage(latex, 15);
+    }
+
     private class TextGroup {
         public String base = "";
         public String subscript = "";
@@ -84,9 +88,5 @@ public class LatexRenderer {
             throw new FormatException();
         }
         return groups;
-    }
-
-    public WritableImage latexToImage(String latex) throws FormatException {
-        return this.latexToImage(latex, 15);
     }
 }

@@ -18,7 +18,6 @@ public class BasicDataController {
 
     public BasicDataController() {
         this.labelsResourceBundle = ResourceBundle.getBundle("gui.text.guiLabels");
-        System.out.println(this.labelsResourceBundle);
     }
 
     /* Labels */
