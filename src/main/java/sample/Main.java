@@ -13,7 +13,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         ResourceBundle bundle = ResourceBundle.getBundle("gui.text.guiLabels", new Locale("pl", "PL"));
-        Parent root = FXMLLoader.load(getClass().getResource("/gui/templates/mainParametersWindow.fxml"), bundle);
+        Parent root = FXMLLoader.load(getClass().getResource("/gui/templates/mainWindow.fxml"), bundle);
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
