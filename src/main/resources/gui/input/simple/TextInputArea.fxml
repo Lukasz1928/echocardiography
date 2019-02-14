@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+
+<fx:root type="javafx.scene.layout.AnchorPane" xmlns:fx="http://javafx.com/fxml">
+    <ImageView fx:id="label" layoutX="3" layoutY="5"/>
+    <TextField fx:id="input" layoutX="3" layoutY="25"/>
+</fx:root>
