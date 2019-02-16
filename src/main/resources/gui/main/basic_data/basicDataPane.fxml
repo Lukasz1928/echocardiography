@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.*?>
-<?import gui.custom.input.simple.TextInputArea?>
-<?import gui.custom.input.simple.DateInputArea?>
+<?import gui.custom.input.simple.TextInput?>
+<?import gui.custom.input.simple.DateInput?>
 
 <AnchorPane id="basicDataPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:id="basicDataPane" fx:controller="gui.controllers.basic_data.BasicDataController">
-    <TextInputArea fx:id="patientInput" label="%patient-data" layoutX="0.0"/>
-    <TextInputArea fx:id="patientIdInput" label="%patient-id" layoutX="175.0"/>
-    <DateInputArea fx:id="dateInput" label="%examination-date" layoutX="350.0"/>
+    <TextInput fx:id="patientInput" label="%patient-data" layoutX="0.0"/>
+    <TextInput fx:id="patientIdInput" label="%patient-id" layoutX="175.0"/>
+    <DateInput fx:id="dateInput" label="%examination-date" layoutX="350.0"/>
 </AnchorPane>

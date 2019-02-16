@@ -5,25 +5,26 @@ import gui.utils.latex_renderer.LatexRenderer;
 import javafx.beans.NamedArg;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 
-public class ComboBoxInputArea extends AnchorPane {
+public class DateInput extends AnchorPane {
 
     @FXML
     public ImageView label;
     @FXML
-    public ComboBox input;
+    public DatePicker input;
 
-    public ComboBoxInputArea(@NamedArg("label") String labelText) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/custom/input/simple/ComboBoxInputArea.fxml"));
+    public DateInput(@NamedArg("label") String labelText) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/custom/input/simple/DateInput.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {
             fxmlLoader.load();
-        } catch(IOException exception) {
+        }
+        catch (IOException exception) {
             throw new RuntimeException(exception);
         }
         setupLabel(labelText);
@@ -34,14 +35,11 @@ public class ComboBoxInputArea extends AnchorPane {
         this.setStyle(cssLayout);
     }
 
-    public void initialize() {
-
-    }
-
     private void setupLabel(String label) {
         try {
             this.label.setImage(new LatexRenderer().latexToImage(label));
-        } catch(FormatException e) {
+        }
+        catch(FormatException e) {
             //TODO:
             System.out.println("exception");
         }

@@ -1,7 +1,7 @@
 package gui.controllers.basic_data;
 
-import gui.custom.input.simple.DateInputArea;
-import gui.custom.input.simple.TextInputArea;
+import gui.custom.input.simple.DateInput;
+import gui.custom.input.simple.TextInput;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 import java.util.ResourceBundle;
@@ -9,11 +9,11 @@ import java.util.ResourceBundle;
 public class BasicDataController {
 
     @FXML
-    public TextInputArea patientInput;
+    public TextInput patientInput;
     @FXML
-    public TextInputArea patientIdInput;
+    public TextInput patientIdInput;
     @FXML
-    public DateInputArea dateInput;
+    public DateInput dateInput;
     @FXML
     public AnchorPane basicDataPane;
 

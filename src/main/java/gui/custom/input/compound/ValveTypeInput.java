@@ -1,22 +1,22 @@
 package gui.custom.input.compound;
 
-import gui.custom.input.simple.RadioButtonInputArea;
+import gui.custom.input.simple.RadioButtonInput;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 
-public class ValveTypeInputArea extends AnchorPane {
+public class ValveTypeInput extends AnchorPane {
 
     @FXML
-    public RadioButtonInputArea nativeInput;
+    public RadioButtonInput nativeInput;
     @FXML
-    public RadioButtonInputArea artificialInput;
+    public RadioButtonInput artificialInput;
     @FXML
-    public RadioButtonInputArea biologicalInput;
+    public RadioButtonInput biologicalInput;
 
-    public ValveTypeInputArea() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/custom/input/compound/ValveTypeInputArea.fxml"));
+    public ValveTypeInput() {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/custom/input/compound/ValveTypeInput.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {

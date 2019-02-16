@@ -3,30 +3,27 @@ package gui.custom.input.simple;
 import gui.utils.latex_renderer.FormatException;
 import gui.utils.latex_renderer.LatexRenderer;
 import javafx.beans.NamedArg;
-import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.TextField;
+import javafx.scene.control.ComboBox;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 
-public class TextInputArea extends AnchorPane {
+public class ComboBoxInput extends AnchorPane {
 
     @FXML
-    private ImageView label;
+    public ImageView label;
     @FXML
-    private TextField input;
+    public ComboBox input;
 
-
-    public TextInputArea(@NamedArg("label") String labelText) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/custom/input/simple/TextInputArea.fxml"));
+    public ComboBoxInput(@NamedArg("label") String labelText) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/custom/input/simple/ComboBoxInput.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {
             fxmlLoader.load();
-        }
-        catch (IOException exception) {
+        } catch(IOException exception) {
             throw new RuntimeException(exception);
         }
         setupLabel(labelText);
@@ -37,17 +34,16 @@ public class TextInputArea extends AnchorPane {
         this.setStyle(cssLayout);
     }
 
+    public void initialize() {
+
+    }
+
     private void setupLabel(String label) {
         try {
             this.label.setImage(new LatexRenderer().latexToImage(label));
-        }
-        catch(FormatException e) {
+        } catch(FormatException e) {
             //TODO:
             System.out.println("exception");
         }
-    }
-
-    public StringProperty textProperty() {
-        return this.input.textProperty();
     }
 }

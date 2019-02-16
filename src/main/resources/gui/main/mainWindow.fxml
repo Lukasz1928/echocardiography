@@ -3,10 +3,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<?import gui.custom.input.simple.ComboBoxInputArea?>
-<?import gui.custom.input.simple.TextInputArea?>
-<?import gui.custom.input.simple.RadioButtonInputArea?>
-<?import gui.custom.input.compound.ValveTypeInputArea?>
+<?import gui.custom.input.simple.ComboBoxInput?>
+<?import gui.custom.input.simple.TextInput?>
+<?import gui.custom.input.simple.RadioButtonInput?>
+<?import gui.custom.input.compound.ValveTypeInput?>
 <?import gui.custom.labels.LatexLabel?>
 <AnchorPane id="mainPane" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.MainController">
     <!-- <Pane layoutX="25.0" layoutY="100.0">

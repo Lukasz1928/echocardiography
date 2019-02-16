@@ -10,15 +10,15 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 
-public class RadioButtonInputArea extends AnchorPane {
+public class RadioButtonInput extends AnchorPane {
 
     @FXML
     public ImageView label;
     @FXML
     public RadioButton input;
 
-    public RadioButtonInputArea(@NamedArg("label") String labelText) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/custom/input/simple/RadioButtonInputArea.fxml"));
+    public RadioButtonInput(@NamedArg("label") String labelText) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/custom/input/simple/RadioButtonInput.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {

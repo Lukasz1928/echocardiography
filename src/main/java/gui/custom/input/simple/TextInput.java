@@ -3,22 +3,24 @@ package gui.custom.input.simple;
 import gui.utils.latex_renderer.FormatException;
 import gui.utils.latex_renderer.LatexRenderer;
 import javafx.beans.NamedArg;
+import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.DatePicker;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 
-public class DateInputArea extends AnchorPane {
+public class TextInput extends AnchorPane {
 
     @FXML
-    public ImageView label;
+    private ImageView label;
     @FXML
-    public DatePicker input;
+    private TextField input;
 
-    public DateInputArea(@NamedArg("label") String labelText) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/custom/input/simple/DateInputArea.fxml"));
+
+    public TextInput(@NamedArg("label") String labelText) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/custom/input/simple/TextInput.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {
@@ -43,5 +45,9 @@ public class DateInputArea extends AnchorPane {
             //TODO:
             System.out.println("exception");
         }
+    }
+
+    public StringProperty textProperty() {
+        return this.input.textProperty();
     }
 }
