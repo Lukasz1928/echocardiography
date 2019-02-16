@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" id="parametersGeneralPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" fx:controller="gui.controllers.parameters.tabs.GeneralParametersPaneController">
+    <ToolBar id="leftVentricleToolbar" layoutX="25.0" layoutY="25.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="generalLeftVentricleLabel" fx:id="generalLeftVentricleLabel"/>
+        <TextField id="leftVentricleInput" prefWidth="100.0" fx:id="leftVentricleInput"/>
+    </ToolBar>
+    <ToolBar id="generalRightVentricleToolbar" layoutX="25.0" layoutY="70.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="generalRightVentricleLabel" fx:id="generalRightVentricleLabel"/>
+        <TextField id="generalRightVentricleInput" prefWidth="100.0" fx:id="generalRightVentricleInput"/>
+    </ToolBar>
+    <ToolBar id="generalInterventricualarSeptumToolbar" layoutX="25.0" layoutY="115.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="generalInterventricularSeptumLabel" fx:id="generalInterventricularSeptumLabel"/>
+        <TextField id="generalInterventricularSeptumInput" prefWidth="100.0" fx:id="generalInterventricularSeptumInput"/>
+    </ToolBar>
+    <ToolBar id="generalBackWallToolbar" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="generalBackWallLabel" fx:id="generalBackWallLabel"/>
+        <TextField id="generalBackWallInput" prefWidth="100.0" fx:id="generalBackWallInput"/>
+    </ToolBar>
+    <ToolBar id="generalLeftAutriumToolbar" layoutX="25.0" layoutY="205.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="generalLeftAutriumLabel" fx:id="generalLeftAutriumLabel"/>
+        <TextField id="generalLeftAutriumInput" prefWidth="100.0" fx:id="generalLeftAutriumInput"/>
+    </ToolBar>
+    <ToolBar id="generalRightAutriumToolbar" layoutX="25.0" layoutY="250.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="generalRightAutriumLabel" fx:id="generalRightAutriumLabel"/>
+        <TextField id="generalRightAutriumInput" prefWidth="100.0" fx:id="generalRightAutriumInput"/>
+    </ToolBar>
+    <ToolBar id="generalAscendingAortaToolbar" layoutX="25.0" layoutY="295.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="generalAscendingAortaLabel" fx:id="generalAscendingAortaLabel"/>
+        <TextField id="generalAscendingAortaInput" prefWidth="100.0" fx:id="generalAscendingAortaInput"/>
+    </ToolBar>
+    <ToolBar id="generalPulmonaryTrunkToolbar" layoutX="25.0" layoutY="340.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="generalPulmonaryTrunkLabel" fx:id="generalPulmonaryTrunkLabel"/>
+        <TextField id="generalTrunkInput" prefWidth="100.0" fx:id="generalTrunkInput"/>
+    </ToolBar>
+    <ToolBar id="generalEfToolbar" layoutX="25.0" layoutY="385.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="generalEfLabel" fx:id="generalEfLabel"/>
+        <TextField id="generalEfInput" prefWidth="100.0" fx:id="generalEfInput"/>
+    </ToolBar>
+    <ToolBar id="generalEaToolbar" layoutX="25.0" layoutY="430.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="generalEaLabel" fx:id="generalEaLabel"/>
+        <TextField id="generalEaInput" prefWidth="100.0" fx:id="generalEaInput"/>
+    </ToolBar>
+    <ToolBar id="generalDtToolbar" layoutX="25.0" layoutY="475.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="generalDtLabel" fx:id="generalDtLabel"/>
+        <TextField id="generalDtInput" prefWidth="100.0" fx:id="generalDtInput"/>
+    </ToolBar>
+    <ToolBar id="generalPericardiumToolbar" layoutX="25.0" layoutY="520.0" prefHeight="40.0" prefWidth="300.0">
+        <ImageView id="generalPericariumTypeLabel" fx:id="generalPericariumTypeLabel"/>
+        <ComboBox id="generalPericardiumTypeInput" prefWidth="100.0" fx:id="generalPericardiumTypeInput"/>
+        <ImageView id="generalPericardiumAmountLabel" fx:id="generalPericardiumAmountLabel"/>
+        <TextField id="generalPericardiumAmountInput" prefWidth="100.0" fx:id="generalPericardiumAmountInput"/>
+    </ToolBar>
+</AnchorPane>

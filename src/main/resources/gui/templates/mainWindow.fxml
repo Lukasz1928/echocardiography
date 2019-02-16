@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.scene.layout.AnchorPane?>
-
-<AnchorPane id="mainPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.Controller">
-    <fx:include source="parametersPane.fxml" layoutX="25" layoutY="100"/>
-    <fx:include source="basicDataPane.fxml" layoutX="25" layoutY="30"/>
-    <fx:include source="descriptionPane.fxml" layoutX="800" layoutY="100"/>
-</AnchorPane>

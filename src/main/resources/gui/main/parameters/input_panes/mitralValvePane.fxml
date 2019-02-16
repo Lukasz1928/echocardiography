@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" id="parametersMitralPane" prefHeight="500.0" prefWidth="800.0" fx:controller="gui.controllers.parameters.tabs.MitralValvePaneController">
+    <ToolBar id="mitralTypeToolbar" layoutX="25.0" layoutY="25.0" prefHeight="40.0" prefWidth="638.0">
+        <RadioButton id="mitralTypeNativeInput" prefWidth="200" fx:id="mitralTypeNativeInput"/>
+        <RadioButton id="mitralTypeBiologicalInput" prefWidth="200" fx:id="mitralTypeBiologicalInput"/>
+        <RadioButton id="mitralTypeArtificialInput" prefWidth="200" fx:id="mitralTypeArtificialInput"/>
+    </ToolBar>
+    <ToolBar id="mitralLeafletsToolbar" layoutX="25.0" layoutY="70.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="mitralLeafletsLabel" fx:id="mitralLeafletsLabel"/>
+        <ComboBox id="mitralLeafletsInput" prefWidth="150.0" fx:id="mitralLeafletsInput"/>
+    </ToolBar>
+    <ToolBar id="mitralRegurgiationToolbar" layoutX="25.0" layoutY="115.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="mitralRegurgiationLabel" fx:id="mitralRegurgiationLabel"/>
+        <ComboBox id="mitralRegurgiationInput" prefWidth="150.0" fx:id="mitralRegurgiationInput"/>
+    </ToolBar>
+    <ToolBar id="mitralGradientToolbar" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="mitralGradientLabel" fx:id="mitralGradientLabel"/>
+        <TextField id="mitralGradientInput" prefWidth="100" fx:id="mitralGradientInput"/>
+    </ToolBar>
+    <ToolBar id="mitralVcToolbar" layoutX="25.0" layoutY="205.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="mitralVcLabel" fx:id="mitralVcLabel"/>
+        <TextField id="mitralVcInput" prefWidth="100" fx:id="mitralVcInput"/>
+    </ToolBar>
+    <ToolBar id="mitralRpisaToolbar" layoutX="25.0" layoutY="250.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="mitralRpisaLabel" fx:id="mitralRpisaLabel"/>
+        <TextField id="mitralRpisaInput" prefWidth="100" fx:id="mitralRpisaInput"/>
+    </ToolBar>
+    <ToolBar id="mitralEroToolbar" layoutX="25.0" layoutY="295.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="mitralEroLabel" fx:id="mitralEroLabel"/>
+        <TextField id="mitralEroInput" prefWidth="100" fx:id="mitralEroInput"/>
+    </ToolBar>
+
+    <ToolBar id="mitralDviToolbar" layoutX="25.0" layoutY="340.0" prefHeight="40.0" prefWidth="700.0">
+        <ImageView id="mitralDviDviLabel" fx:id="mitralDviDviLabel"/>
+        <TextField id="mitralDviDviInput" prefWidth="100" fx:id="mitralDviDviInput"/>
+        <ImageView id="mitralDviVtiprLabel" fx:id="mitralDviVtiprLabel"/>
+        <TextField id="mitralDviVtiprInput" prefWidth="100" fx:id="mitralDviVtiprInput"/>
+        <ImageView id="mitralDviVtilvotLabel" fx:id="mitralDviVtilvotLabel"/>
+        <TextField id="mitralDviVtilvotInput" prefWidth="100" fx:id="mitralDviVtilvotInput"/>
+    </ToolBar>
+    <ToolBar id="mitralEoaToolbar" layoutX="25.0" layoutY="385.0" prefHeight="40.0" prefWidth="700.0">
+        <ImageView id="mitralEoaEoaLabel" fx:id="mitralEoaEoaLabel"/>
+        <TextField id="mitralEoaEoaInput" prefWidth="100" fx:id="mitralEoaEoaInput"/>
+        <ImageView id="mitralEoaVtiprLabel" fx:id="mitralEoaVtiprLabel"/>
+        <TextField id="mitralEoaVtiprInput" prefWidth="100" fx:id="mitralEoaVtiprInput"/>
+        <ImageView id="mitralEoaVtilvotLabel" fx:id="mitralEoaVtilvotLabel"/>
+        <TextField id="mitralEoaVtilvotLabel" prefWidth="100"/>
+        <ImageView id="mitralEoaCsalvotLabel" fx:id="mitralEoaCsalvotLabel"/>
+        <TextField id="mitralEoaCsalvotInput" prefWidth="100" fx:id="mitralEoaCsalvotInput"/>
+    </ToolBar>
+
+    <ToolBar id="mitralPhtToolbar" layoutX="25.0" layoutY="430.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="mitralPhtLabel" fx:id="mitralPhtLabel"/>
+        <TextField id="mitralPhtInput" prefWidth="100" fx:id="mitralPhtInput"/>
+    </ToolBar>
+    <ToolBar id="mitralVmaxToolbar" layoutX="25.0" layoutY="475.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="mitralVmaxLabel" fx:id="mitralVmaxLabel"/>
+        <TextField id="mitralVmaxInput" prefWidth="100" fx:id="mitralVmaxInput"/>
+    </ToolBar>
+    <ToolBar id="mitralMvaToolbar" layoutX="25.0" layoutY="520.0" prefHeight="40.0" prefWidth="200.0">
+        <ImageView id="mitralMvaLabel" fx:id="mitralMvaLabel"/>
+        <TextField id="mitralMvaInput" prefWidth="100" fx:id="mitralMvaInput"/>
+    </ToolBar>
+</AnchorPane>

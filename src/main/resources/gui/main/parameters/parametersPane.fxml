@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<AnchorPane id="parametersPane" prefWidth="750.0" prefHeight="750" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.parameters.ParametersController">
+    <TabPane id="parametersTabPane" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" style="FxBackgroundColor: gray;" tabClosingPolicy="UNAVAILABLE">
+        <Tab id="parametersGeneralTab" fx:id="parametersGeneralTab">
+            <fx:include source="input_panes/generalParametersPane.fxml" fx:id="parametersGeneralPane"/>
+        </Tab>
+        <Tab id="parametersMitralValveTab" fx:id="parametersMitralValveTab">
+            <fx:include source="input_panes/mitralValvePane.fxml" fx:id="parametersMitralValvePane"/>
+        </Tab>
+        <Tab id="parametersAorticValveTab" fx:id="parametersAorticValveTab">
+            <fx:include source="input_panes/aorticValvePane.fxml" fx:id="parametersAorticValvePane"/>
+        </Tab>
+        <Tab id="parametersTricuspidValveTab" fx:id="parametersTricuspidValveTab">
+            <fx:include source="input_panes/tricuspidValvePane.fxml" fx:id="parametersTricuspidValvePane"/>
+        </Tab>
+        <Tab id="parametersPulmonaryValveTab" fx:id="parametersPulmonaryValveTab">
+            <fx:include source="input_panes/pulmonaryValvePane.fxml" fx:id="parametersPulmonaryValvePane"/>
+        </Tab>
+    </TabPane>
+</AnchorPane>
