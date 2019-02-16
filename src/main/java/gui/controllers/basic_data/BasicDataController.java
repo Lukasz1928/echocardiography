@@ -1,14 +1,21 @@
 package gui.controllers.basic_data;
 
-import gui.utils.latex_renderer.FormatException;
-import gui.utils.latex_renderer.LatexRenderer;
+import gui.custom.input.simple.DateInputArea;
+import gui.custom.input.simple.TextInputArea;
 import javafx.fxml.FXML;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import java.util.ResourceBundle;
 
 public class BasicDataController {
+
+    @FXML
+    public TextInputArea patientInput;
+    @FXML
+    public TextInputArea patientIdInput;
+    @FXML
+    public DateInputArea dateInput;
+    @FXML
+    public AnchorPane basicDataPane;
 
     private ResourceBundle labelsResourceBundle;
 
@@ -20,37 +27,11 @@ public class BasicDataController {
         this.labelsResourceBundle = ResourceBundle.getBundle("gui.text.guiLabels");
     }
 
-    /* Labels */
-    @FXML
-    private ImageView patientLabel;
-    @FXML
-    private ImageView patientIdLabel;
-    @FXML
-    private ImageView dateLabel;
-
-    /* Input fields */
-    @FXML
-    private TextField patientInput;
-    @FXML
-    private TextField patientIdInput;
-    @FXML
-    private DatePicker dateInput;
-
     @FXML
     private void initialize() {
-        this.setupLabels();
+        String cssLayout = "-fx-border-color: gray;\n" +
+                "-fx-border-width: 1;\n" +
+                "-fx-border-style: dashed;\n";
+        this.basicDataPane.setStyle(cssLayout);
     }
-
-    private void setupLabels() {
-        LatexRenderer lr = new LatexRenderer();
-        try {
-            this.patientLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("patient-data")));
-            this.patientIdLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("patient-id")));
-            this.dateLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("patient-id")));
-        }
-        catch(FormatException e) {
-            //
-        }
-    }
-
 }
