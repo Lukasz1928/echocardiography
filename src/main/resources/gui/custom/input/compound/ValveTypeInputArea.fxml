@@ -6,8 +6,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<?import gui.input.simple.ComboBoxInputArea?>
-<?import gui.input.simple.RadioButtonInputArea?>
+<?import gui.custom.input.simple.ComboBoxInputArea?>
+<?import gui.custom.input.simple.RadioButtonInputArea?>
 <fx:root type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
     <RadioButtonInputArea layoutX="5" layoutY="5" label="aaa" fx:id="nativeInput"/>
     <RadioButtonInputArea layoutX="105" layoutY="5" label="bbb" fx:id="artificialInput"/>
