@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import gui.custom.input.simple.RadioButtonInput?>
+
+<fx:root type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <RadioButtonInput layoutX="5" layoutY="5" fx:id="nativeInput" label="%type-native"/>
+    <RadioButtonInput layoutX="205" layoutY="5" fx:id="artificialInput" label="%type-artificial"/>
+    <RadioButtonInput layoutX="405" layoutY="5" fx:id="biologicalInput" label="%type-biological"/>
+</fx:root>
