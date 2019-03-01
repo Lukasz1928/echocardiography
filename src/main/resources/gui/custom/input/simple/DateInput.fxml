@@ -2,9 +2,9 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.image.ImageView?>
+<?import gui.custom.labels.LatexLabel?>
 
-<fx:root type="javafx.scene.layout.AnchorPane" xmlns:fx="http://javafx.com/fxml">
-    <ImageView fx:id="label" layoutX="3" layoutY="5"/>
-    <DatePicker fx:id="input" layoutX="3" layoutY="25"/>
+<fx:root type="javafx.scene.layout.HBox" xmlns:fx="http://javafx.com/fxml" spacing="10">
+    <LatexLabel fx:id="label"/>
+    <DatePicker fx:id="input"/>
 </fx:root>

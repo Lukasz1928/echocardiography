@@ -1,49 +1,77 @@
 package gui.custom.input.simple;
 
+import gui.custom.labels.LatexLabel;
 import gui.utils.latex_renderer.FormatException;
 import gui.utils.latex_renderer.LatexRenderer;
 import javafx.beans.NamedArg;
+import javafx.beans.property.BooleanProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.RadioButton;
+import javafx.geometry.Orientation;
+import javafx.geometry.Pos;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.*;
+
 import java.io.IOException;
 
-public class RadioButtonInput extends AnchorPane {
+public class RadioButtonInput extends HBox {
 
     @FXML
-    public ImageView label;
+    private LatexLabel label;
     @FXML
-    public RadioButton input;
+    private RadioButton input;
 
-    public RadioButtonInput(@NamedArg("label") String labelText) {
+    public RadioButtonInput() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/custom/input/simple/RadioButtonInput.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {
             fxmlLoader.load();
-        } catch(IOException exception) {
+        }
+        catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-        setupLabel(labelText);
-        // TODO: update css (much) later
+        setupStyle();
+        // TODO: move button to middle of input
+    }
+
+    public RadioButtonInput(@NamedArg("label") String label) {
+        this();
+        setupLabel(label);
+    }
+
+    public RadioButtonInput(@NamedArg("label") String label, @NamedArg("description") String description) {
+        this();
+        setupLabel(label);
+        setupDescription(description);
+    }
+
+    private void setupLabel(String label) {
+        this.label.setText(label);
+    }
+
+    private void setupDescription(String description) {
+        Tooltip.install(this, new Tooltip(description));
+    }
+
+    private void setupStyle() {
         String cssLayout = "-fx-border-color: gray;\n" +
                 "-fx-border-width: 1;\n" +
                 "-fx-border-style: dashed;\n";
         this.setStyle(cssLayout);
     }
 
-    public void initialize() {
-
+    public void setToggleGroup(ToggleGroup tg) {
+        this.input.setToggleGroup(tg);
     }
 
-    private void setupLabel(String label) {
-        try {
-            this.label.setImage(new LatexRenderer().latexToImage(label));
-        } catch(FormatException e) {
-            //TODO:
-            System.out.println("exception");
-        }
+    public void setSelected(Boolean selected) {
+        this.input.setSelected(selected);
+    }
+
+    public BooleanProperty selectedProperty() {
+        return this.input.selectedProperty();
     }
 }
