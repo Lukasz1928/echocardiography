@@ -4,31 +4,29 @@ import gui.custom.input.simple.DateInput;
 import gui.custom.input.simple.TextInput;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
-import java.util.ResourceBundle;
 
 public class BasicDataController {
 
     @FXML
-    public TextInput patientInput;
+    private TextInput patientInput;
     @FXML
-    public TextInput patientIdInput;
+    private TextInput patientIdInput;
     @FXML
-    public DateInput dateInput;
+    private DateInput dateInput;
     @FXML
-    public AnchorPane basicDataPane;
-
-    private ResourceBundle labelsResourceBundle;
-
-    public BasicDataController(ResourceBundle resourceBundle) {
-        this.labelsResourceBundle = resourceBundle;
-    }
-
-    public BasicDataController() {
-        this.labelsResourceBundle = ResourceBundle.getBundle("gui.text.guiLabels");
-    }
+    private AnchorPane basicDataPane;
 
     @FXML
     private void initialize() {
+        setupStyle();
+        setupDefaultValues();
+    }
+
+    private void setupDefaultValues() {
+        this.dateInput.reset();
+    }
+
+    private void setupStyle() {
         String cssLayout = "-fx-border-color: gray;\n" +
                 "-fx-border-width: 1;\n" +
                 "-fx-border-style: dashed;\n";

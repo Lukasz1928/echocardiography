@@ -24,51 +24,51 @@ public class AorticValvePaneController {
 
     /* labels */
     @FXML
-    public ImageView aorticLeafletsLabel;
+    private ImageView aorticLeafletsLabel;
     @FXML
-    public ImageView aorticRegurgiationLabel;
+    private ImageView aorticRegurgiationLabel;
     @FXML
-    public ImageView aorticGradientLabel;
+    private ImageView aorticGradientLabel;
     @FXML
-    public ImageView aorticVcLabel;
+    private ImageView aorticVcLabel;
     @FXML
-    public ImageView aorticIalvotLabel;
+    private ImageView aorticIalvotLabel;
     @FXML
-    public ImageView aorticPhtLabel;
+    private ImageView aorticPhtLabel;
     @FXML
-    public ImageView aorticRpisaLabel;
+    private ImageView aorticRpisaLabel;
     @FXML
-    public ImageView aorticAvaLabel;
+    private ImageView aorticAvaLabel;
     @FXML
-    public ImageView aorticVmaxLabel;
+    private ImageView aorticVmaxLabel;
     @FXML
-    public ImageView aorticDviDviLabel;
+    private ImageView aorticDviDviLabel;
 
     /* input fields */
     @FXML
-    public RadioButton aorticTypeNativeInput;
+    private RadioButton aorticTypeNativeInput;
     @FXML
-    public RadioButton aorticTypeBiologicalInput;
+    private RadioButton aorticTypeBiologicalInput;
     @FXML
-    public RadioButton aorticTypeArtificialInput;
+    private RadioButton aorticTypeArtificialInput;
     @FXML
-    public ComboBox aorticLeafletsInput;
+    private ComboBox aorticLeafletsInput;
     @FXML
-    public ComboBox aorticRegurgiationInput;
+    private ComboBox aorticRegurgiationInput;
     @FXML
-    public TextField aorticGradientInput;
+    private TextField aorticGradientInput;
     @FXML
-    public TextField aorticVcInput;
+    private TextField aorticVcInput;
     @FXML
-    public TextField aorticIalvotInput;
+    private TextField aorticIalvotInput;
     @FXML
-    public TextField aorticPhtInput;
+    private TextField aorticPhtInput;
     @FXML
-    public TextField aorticRpisaInput;
+    private TextField aorticRpisaInput;
     @FXML
-    public TextField aorticAvaInput;
+    private TextField aorticAvaInput;
     @FXML
-    public TextField aorticVmaxInput;
+    private TextField aorticVmaxInput;
 
     public void initialize() {
         setupLabels();

@@ -25,41 +25,27 @@ public class ParametersController {
 
     /* tabs */
     @FXML
-    public Tab parametersGeneralTab;
+    private Tab parametersGeneralTab;
     @FXML
-    public Tab parametersMitralValveTab;
+    private Tab parametersMitralValveTab;
     @FXML
-    public Tab parametersAorticValveTab;
+    private Tab parametersAorticValveTab;
     @FXML
-    public Tab parametersTricuspidValveTab;
+    private Tab parametersTricuspidValveTab;
     @FXML
-    public Tab parametersPulmonaryValveTab;
+    private Tab parametersPulmonaryValveTab;
 
     /* controllers */
     @FXML
-    public GeneralParametersPaneController parametersGeneralPaneController;
+    private GeneralParametersPaneController parametersGeneralPaneController;
     @FXML
-    public MitralValvePaneController parametersMitralValvePaneController;
+    private MitralValvePaneController parametersMitralValvePaneController;
     @FXML
-    public AorticValvePaneController parametersAorticValvePaneController;
+    private AorticValvePaneController parametersAorticValvePaneController;
     @FXML
-    public TricuspidValvePaneController parametersTricuspidValvePaneController;
+    private TricuspidValvePaneController parametersTricuspidValvePaneController;
     @FXML
-    public PulmonaryValvePaneController parametersPulmonaryValvePaneController;
+    private PulmonaryValvePaneController parametersPulmonaryValvePaneController;
 
 
-    public void initialize() {
-        setupLabels();
-    }
-
-    private void setupLabels() {
-        LatexRenderer lr = new LatexRenderer();
-        try {
-            // TODO: Setup tabs labels
-            throw new FormatException(); // TODO: Remove this line!!!
-        }
-        catch(FormatException e) {
-            // TODO: Show some kind of information about error
-        }
-    }
 }

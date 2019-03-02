@@ -10,30 +10,30 @@ public class PulmonaryValvePaneController {
 
     /*labels */
     @FXML
-    public ImageView pulmonaryLeafletsLabel;
+    private ImageView pulmonaryLeafletsLabel;
     @FXML
-    public ImageView pulmonaryRegurgiationLabel;
+    private ImageView pulmonaryRegurgiationLabel;
     @FXML
-    public ImageView pulmonaryGradientLabel;
+    private ImageView pulmonaryGradientLabel;
     @FXML
-    public ImageView pulmonaryActLabel;
+    private ImageView pulmonaryActLabel;
     // TODO: add radio button labels
 
     /* inputs */
     @FXML
-    public RadioButton pulmonaryTypeNativeInput;
+    private RadioButton pulmonaryTypeNativeInput;
     @FXML
-    public RadioButton pulmonaryTypeBiologicalInput;
+    private RadioButton pulmonaryTypeBiologicalInput;
     @FXML
-    public RadioButton pulmonaryTypeArtificialInput;
+    private RadioButton pulmonaryTypeArtificialInput;
     @FXML
-    public ComboBox pulmonaryLeafletsInput;
+    private ComboBox pulmonaryLeafletsInput;
     @FXML
-    public ComboBox pulmonaryRegurgiationInput;
+    private ComboBox pulmonaryRegurgiationInput;
     @FXML
-    public TextField pulmonaryGradientInput;
+    private TextField pulmonaryGradientInput;
     @FXML
-    public TextField pulmonaryActInput;
+    private TextField pulmonaryActInput;
 
     public void initialize() {
 
