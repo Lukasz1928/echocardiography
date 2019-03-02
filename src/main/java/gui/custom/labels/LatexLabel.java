@@ -15,6 +15,11 @@ public class LatexLabel extends AnchorPane {
     public ImageView label;
 
     public LatexLabel(@NamedArg("text") String text) {
+        this();
+        setText(text);
+    }
+
+    public LatexLabel() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/custom/labels/LatexLabel.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -24,14 +29,13 @@ public class LatexLabel extends AnchorPane {
         catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-        setLabel(text);
         String cssLayout = "-fx-border-color: gray;\n" +
                 "-fx-border-width: 1;\n" +
                 "-fx-border-style: dashed;\n";
         this.setStyle(cssLayout);
     }
 
-    private void setLabel(String text) {
+    public void setText(String text) {
         LatexRenderer lr = new LatexRenderer();
         try {
             this.label.setImage(lr.latexToImage(text));

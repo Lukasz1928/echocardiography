@@ -5,14 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        ResourceBundle bundle = ResourceBundle.getBundle("gui.text.guiLabels", new Locale("pl", "PL"));
+        ResourceBundle bundle = ResourceBundle.getBundle("gui.text.labels.guiLabels");
         Parent root = FXMLLoader.load(getClass().getResource("/gui/main/mainWindow.fxml"), bundle);
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root));

@@ -3,19 +3,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<?import gui.custom.input.simple.ComboBoxInput?>
-<?import gui.custom.input.simple.TextInput?>
-<?import gui.custom.input.simple.RadioButtonInput?>
-<?import gui.custom.input.compound.ValveTypeInput?>
-<?import gui.custom.labels.LatexLabel?>
-<AnchorPane id="mainPane" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.MainController">
-    <!-- <Pane layoutX="25.0" layoutY="100.0">
+<AnchorPane id="mainPane" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.MainController">
+    <Pane layoutX="25.0" layoutY="100.0">
         <fx:include source="parameters/parametersPane.fxml" fx:id="parametersPane"/>
-    </Pane> -->
+    </Pane>
     <Pane layoutX="20.0" layoutY="10.0">
         <fx:include source="basic_data/basicDataPane.fxml" fx:id="basicDataPane"/>
     </Pane>
-    <!-- <Pane layoutX="800.0" layoutY="100.0">
+    <Pane layoutX="800.0" layoutY="100.0">
         <fx:include source="description/descriptionPane.fxml" fx:id="descriptionPane"/>
-    </Pane> -->
+    </Pane>
 </AnchorPane>

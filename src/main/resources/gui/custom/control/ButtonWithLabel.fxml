@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import gui.custom.labels.LatexLabel?>
 
-<fx:root type="javafx.scene.control.Button" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:id="input">
+<fx:root type="javafx.scene.control.Button" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
     <graphic>
         <LatexLabel fx:id="label"/>
     </graphic>

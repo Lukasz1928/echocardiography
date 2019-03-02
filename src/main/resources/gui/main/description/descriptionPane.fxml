@@ -2,25 +2,13 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import gui.custom.control.ButtonWithLabel?>
 
-<?import javafx.scene.image.ImageView?>
 <AnchorPane id="descriptionPane" prefHeight="750" prefWidth="350" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.description.DescriptionController">
     <TextArea id="descriptionInput" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" prefHeight="500" fx:id="descriptionInput"/>
-    <AnchorPane id="descriptionControlPane" layoutY="510.0" fx:id="descriptionControlPane">
-        <Button id="descriptionSaveButton" fx:id="descriptionSaveButton">
-            <graphic>
-                <ImageView id="descriptionSaveButtonLabel" fx:id="descriptionSaveButtonLabel"/>
-            </graphic>
-        </Button>
-        <Button id="descriptionPreviewButton" fx:id="descriptionPreviewButton">
-            <graphic>
-                <ImageView id="descriptionPreviewButtonLabel" fx:id="descriptionPreviewButtonLabel"/>
-            </graphic>
-        </Button>
-        <Button id="descriptionGenerateButton" fx:id="descriptionGenerateButton">
-            <graphic>
-                <ImageView id="descriptionGenerateButtonLabel" fx:id="descriptionGenerateButtonLabel"/>
-            </graphic>
-        </Button>
-    </AnchorPane>
+    <HBox id="descriptionControl" layoutY="510.0" fx:id="descriptionControl" spacing="10">
+        <ButtonWithLabel id="descriptionSaveButton" fx:id="descriptionSaveButton" label="%button-save"/>
+        <ButtonWithLabel id="descriptionPreviewButton" fx:id="descriptionPreviewButton" label="%button-preview"/>
+        <ButtonWithLabel id="descriptionGenerateButton" fx:id="descriptionGenerateButton" label="%button-generate"/>
+    </HBox>
 </AnchorPane>
