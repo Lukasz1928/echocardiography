@@ -1,71 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<?import gui.custom.input.composite.ValveTypeInput?>
+<?import gui.custom.input.simple.ComboBoxInput?>
+<?import gui.custom.input.simple.TextInput?>
+<?import gui.custom.input.composite.CollapsibleInput?>
 
-<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" id="parametersAorticPane" prefHeight="500.0" prefWidth="800.0" fx:controller="gui.controllers.parameters.tabs.AorticValvePaneController">
-    <ToolBar id="aorticTypeToolbar" layoutX="25.0" layoutY="25.0" prefHeight="40.0" prefWidth="638.0">
-        <RadioButton id="aorticTypeNativeInput" prefWidth="200" fx:id="aorticTypeNativeInput"/>
-        <RadioButton id="aorticTypeBiologicalInput" prefWidth="200" fx:id="aorticTypeBiologicalInput"/>
-        <RadioButton id="aorticTypeArtificialInput" prefWidth="200" fx:id="aorticTypeArtificialInput"/>
-    </ToolBar>
-    <ToolBar id="aorticLeafletsToolbar" layoutX="25.0" layoutY="70.0" prefHeight="40.0" prefWidth="200.0">
-        <ImageView id="aorticLeafletsLabel" fx:id="aorticLeafletsLabel"/>
-        <ComboBox id="aorticLeafletsInput" prefWidth="150.0" fx:id="aorticLeafletsInput"/>
-    </ToolBar>
-    <ToolBar id="aorticRegurgiationToolbar" layoutX="25.0" layoutY="115.0" prefHeight="40.0" prefWidth="200.0">
-        <ImageView id="aorticRegurgiationLabel" fx:id="aorticRegurgiationLabel"/>
-        <ComboBox id="aorticRegurgiationInput" prefWidth="150.0" fx:id="aorticRegurgiationInput"/>
-    </ToolBar>
-    <ToolBar id="aorticGradientToolbar" layoutX="25.0" layoutY="160.0" prefHeight="40.0" prefWidth="200.0">
-        <ImageView id="aorticGradientLabel" fx:id="aorticGradientLabel"/>
-        <TextField id="aorticGradientInput" prefWidth="100" fx:id="aorticGradientInput"/>
-    </ToolBar>
-    <ToolBar id="aorticVcToolbar" layoutX="25.0" layoutY="205.0" prefHeight="40.0" prefWidth="200.0">
-        <ImageView id="aorticVcLabel" fx:id="aorticVcLabel"/>
-        <TextField id="aorticVcInput" prefWidth="100" fx:id="aorticVcInput"/>
-    </ToolBar>
-    <ToolBar id="aorticIalvotToolbar" layoutX="25.0" layoutY="250.0" prefHeight="40.0" prefWidth="200.0">
-        <ImageView id="aorticIalvotLabel" fx:id="aorticIalvotLabel"/>
-        <TextField id="aorticIalvotInput" prefWidth="100" fx:id="aorticIalvotInput"/>
-    </ToolBar>
-    <ToolBar id="aorticPhtToolbar" layoutX="25.0" layoutY="295.0" prefHeight="40.0" prefWidth="200.0">
-        <ImageView id="aorticPhtLabel" fx:id="aorticPhtLabel"/>
-        <TextField id="aorticPhtInput" prefWidth="100" fx:id="aorticPhtInput"/>
-    </ToolBar>
-    <ToolBar id="aorticRpisaToolbar" layoutX="25.0" layoutY="340.0" prefHeight="40.0" prefWidth="200.0">
-        <ImageView id="aorticRpisaLabel" fx:id="aorticRpisaLabel"/>
-        <TextField id="aorticRpisaInput" prefWidth="100" fx:id="aorticRpisaInput"/>
-    </ToolBar>
-    <ToolBar id="aorticAvaToolbar" layoutX="25.0" layoutY="385.0" prefHeight="40.0" prefWidth="200.0">
-        <ImageView id="aorticAvaLabel" fx:id="aorticAvaLabel"/>
-        <TextField id="aorticAvaInput" prefWidth="100" fx:id="aorticAvaInput"/>
-    </ToolBar>
-    <ToolBar id="aorticVmaxToolbar" layoutX="25.0" layoutY="430.0" prefHeight="40.0" prefWidth="200.0">
-        <ImageView id="aorticVmaxLabel" fx:id="aorticVmaxLabel"/>
-        <TextField id="aorticVmaxInput" prefWidth="100" fx:id="aorticVmaxInput"/>
-    </ToolBar>
-    <ToolBar id="aorticDviToolbar" layoutX="25.0" layoutY="475.0" prefHeight="40.0" prefWidth="700.0">
-        <ImageView id="aorticDviDviLabel" fx:id="aorticDviDviLabel"/>
-        <TextField id="aorticDviDviInput" prefWidth="100" fx:id="aorticDviDviInput"/>
-        <ImageView id="aorticDviVmaxlvotLabel" fx:id="aorticDviVmaxlvotLabel"/>
-        <TextField id="aorticDviVmaxlvotInput" prefWidth="100" fx:id="aorticDviVmaxlvotInput"/>
-        <ImageView id="aorticDviVmaxprLabel" fx:id="aorticDviVmaxprLabel"/>
-        <TextField id="aorticDviVmaxprInput" prefWidth="100" fx:id="aorticDviVmaxprInput"/>
-    </ToolBar>
-    <ToolBar id="aorticEoaToolbar" layoutX="25.0" layoutY="520.0" prefHeight="40.0" prefWidth="700.0">
-        <ImageView id="aorticEoaEoaLabel" fx:id="aorticEoaEoaLabel"/>
-        <TextField id="aorticEoaEoaInput" prefWidth="100" fx:id="aorticEoaEoaInput"/>
-        <ImageView id="aorticEoaCsalvotLabel" fx:id="aorticEoaCsalvotLabel"/>
-        <TextField id="aorticEoaCsalvotInput" prefWidth="100" fx:id="aorticEoaCsalvotInput"/>
-        <ImageView id="aorticEoaVtilvotLabel" fx:id="aorticEoaVtilvotLabel"/>
-        <TextField id="aorticEoaVtilvotInput" prefWidth="100" fx:id="aorticEoaVtilvotInput"/>
-        <ImageView id="aorticEoaCsaprLabel" fx:id="aorticEoaCsaprLabel"/>
-        <TextField id="aorticEoaCsaprInput" prefWidth="100" fx:id="aorticEoaCsaprInput"/>
-    </ToolBar>
-    <ToolBar id="aorticAtToolbar" layoutX="25.0" layoutY="565.0" prefHeight="40.0" prefWidth="200.0">
-        <ImageView id="aorticAtLabel" fx:id="aorticAtLabel"/>
-        <TextField id="aorticAtInput" prefWidth="100" fx:id="aorticAtInput"/>
-    </ToolBar>
-</AnchorPane>
+<VBox id="parametersAorticPane" spacing="5" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="gui.controllers.parameters.tabs.AorticValvePaneController">
+    <padding>
+        <Insets left="10.0" top="5.0" />
+    </padding>
+    <ValveTypeInput id="aorticValveTypeInput" fx:id="valveTypeInput" maxWidth="-Infinity"/>
+    <ComboBoxInput id="aorticLeafletsInput" fx:id="leafletsInput" label="%aortic-leaflets" maxWidth="-Infinity"/>
+    <ComboBoxInput id="aorticRegurgiationInput" fx:id="regurgiationInput" label="%aortic-regurgiation" maxWidth="-Infinity"/>
+    <TextInput id="aorticGradientInput" fx:id="gradientInput" label="%aortic-gradient" maxWidth="-Infinity"/>
+    <TextInput id="aorticVcInput" fx:id="vcInput" label="%aortic-vc" maxWidth="-Infinity"/>
+    <TextInput id="aorticIalvotInput" fx:id="ialvotInput" label="%aortic-ialvot" maxWidth="-Infinity"/>
+    <TextInput id="aorticPhtInput" fx:id="phtInput" label="%aortic-pht" maxWidth="-Infinity"/>
+    <TextInput id="aorticRpisaInput" fx:id="rpisaInput" label="%aortic-rpisa" maxWidth="-Infinity"/>
+    <TextInput id="aorticAvaInput" fx:id="avaInput" label="%aortic-ava" maxWidth="-Infinity"/>
+    <TextInput id="aorticVmaxInput" fx:id="vmaxInput" label="%aortic-vmax" maxWidth="-Infinity"/>
+    <CollapsibleInput id="aorticDviCollapsibleInput" maxWidth="-Infinity">
+        <mainInputs>
+            <TextInput id="aorticDviDviInput" fx:id="dviDviInput" label="%aortic-dvi" maxWidth="-Infinity"/>
+        </mainInputs>
+        <secondaryInputs>
+            <TextInput id="aorticDviVmaxlvotInput" fx:id="dviVtiprInput" label="%aortic-vmaxlvot" maxWidth="-Infinity"/>
+            <TextInput id="aorticDviVmaxprInput" fx:id="dviVtilvotInput" label="%aortic-vmaxpr" maxWidth="-Infinity"/>
+        </secondaryInputs>
+    </CollapsibleInput>
+    <CollapsibleInput id="aorticEoaCollapsibleInput" maxWidth="-Infinity">
+        <mainInputs>
+            <TextInput id="aorticEoaEoaInput" fx:id="eoaEoaInput" label="%aortic-eoa" maxWidth="-Infinity"/>
+        </mainInputs>
+        <secondaryInputs>
+            <TextInput id="aorticEoaCsalvotInput" fx:id="eoaVtiprInput" label="%aortic-csalvot" maxWidth="-Infinity"/>
+            <TextInput id="aorticEoaVtilvotInput" fx:id="eoaVtilvotInput" label="%aortic-vtilvot" maxWidth="-Infinity"/>
+            <TextInput id="aorticEoaCsaprInput" fx:id="eoaCsalvotInput" label="%aortic-csapr" maxWidth="-Infinity"/>
+        </secondaryInputs>
+    </CollapsibleInput>
+    <TextInput id="aorticAtInput" fx:id="atInput" label="%aortic-at" maxWidth="-Infinity"/>
+</VBox>

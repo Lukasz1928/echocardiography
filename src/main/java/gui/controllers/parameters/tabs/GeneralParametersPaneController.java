@@ -1,11 +1,12 @@
 package gui.controllers.parameters.tabs;
 
+import gui.custom.input.simple.ComboBoxInput;
 import gui.custom.input.simple.TextInput;
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
 
 
 public class GeneralParametersPaneController {
+
     @FXML
     private TextInput leftVentricleInput;
     @FXML
@@ -28,4 +29,12 @@ public class GeneralParametersPaneController {
     private TextInput eaInput;
     @FXML
     private TextInput dtInput;
+    @FXML
+    private ComboBoxInput pericardiumInput;
+    @FXML
+    private TextInput pericardiumFluidInput;
+
+    public void initialize() {
+
+    }
 }

@@ -8,6 +8,7 @@ import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
+import java.util.ResourceBundle;
 
 public class ValveTypeInput extends AnchorPane {
 
@@ -24,6 +25,7 @@ public class ValveTypeInput extends AnchorPane {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/custom/input/composite/ValveTypeInput.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
+        fxmlLoader.setResources(ResourceBundle.getBundle("gui.text.labels.guiLabels"));
         try {
             fxmlLoader.load();
         }

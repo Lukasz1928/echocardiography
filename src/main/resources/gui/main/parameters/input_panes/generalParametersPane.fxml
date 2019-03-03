@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
 <?import gui.custom.input.simple.TextInput?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import gui.custom.input.composite.CollapsibleInput?>
+<?import gui.custom.input.simple.ComboBoxInput?>
 
-<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" id="parametersGeneralPane" fx:controller="gui.controllers.parameters.tabs.GeneralParametersPaneController">
-    <TextInput id="leftVentricleInput" fx:id="leftVentricleInput" layoutX="5" layoutY="5" label="%general-left-ventricle"/>
-    <TextInput id="rightVentricleInput" fx:id="rightVentricleInput" layoutX="5" layoutY="35" label="%general-right-ventricle"/>
-    <TextInput id="interventricualarSeptumInput" fx:id="interventricualarSeptumInput" layoutX="5" layoutY="65" label="%general-interventricular-septum"/>
-    <TextInput id="backWallInput" fx:id="backWallInput" layoutX="5" layoutY="95" label="%general-back-wall"/>
-    <TextInput id="leftAutriumInput" fx:id="leftAutriumInput" layoutX="5" layoutY="125" label="%general-left-autrium"/>
-    <TextInput id="rightAutriumInput" fx:id="rightAutriumInput" layoutX="5" layoutY="155" label="%general-right-autrium"/>
-    <TextInput id="ascendingAortaInput" fx:id="ascendingAortaInput" layoutX="5" layoutY="185" label="%general-ascending-aorta"/>
-    <TextInput id="pulmonaryTrunkInput" fx:id="pulmonaryTrunkInput" layoutX="5" layoutY="215" label="%general-pulmonary-trunk"/>
-    <TextInput id="efInput" fx:id="efInput" layoutX="5" layoutY="245" label="%general-ef"/>
-    <TextInput id="eaInput" fx:id="eaInput" layoutX="5" layoutY="275" label="%general-ea"/>
-    <TextInput id="dtInput" fx:id="dtInput" layoutX="5" layoutY="305" label="%general-dt"/>
-    <!-- TODO: -->
-    <!--<ToolBar id="generalPericardiumToolbar" layoutX="25.0" layoutY="520.0" prefHeight="40.0" prefWidth="300.0">-->
-        <!--<ImageView id="generalPericariumTypeLabel" fx:id="generalPericariumTypeLabel"/>-->
-        <!--<ComboBox id="generalPericardiumTypeInput" prefWidth="100.0" fx:id="generalPericardiumTypeInput"/>-->
-        <!--<ImageView id="generalPericardiumAmountLabel" fx:id="generalPericardiumAmountLabel"/>-->
-        <!--<TextField id="generalPericardiumAmountInput" prefWidth="100.0" fx:id="generalPericardiumAmountInput"/>-->
-    <!--</ToolBar>-->
-</AnchorPane>
+<VBox id="parametersGeneralPane" spacing="5" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.parameters.tabs.GeneralParametersPaneController">
+    <padding>
+        <Insets left="10.0" top="5.0" />
+    </padding>
+    <TextInput id="leftVentricleInput" fx:id="leftVentricleInput" label="%general-left-ventricle" maxWidth="-Infinity" />
+    <TextInput id="rightVentricleInput" fx:id="rightVentricleInput" label="%general-right-ventricle" maxWidth="-Infinity" />
+    <TextInput id="interventricualarSeptumInput" fx:id="interventricualarSeptumInput" label="%general-interventricular-septum" maxWidth="-Infinity" />
+    <TextInput id="backWallInput" fx:id="backWallInput" label="%general-back-wall" maxWidth="-Infinity" />
+    <TextInput id="leftAutriumInput" fx:id="leftAutriumInput" label="%general-left-autrium" maxWidth="-Infinity" />
+    <TextInput id="rightAutriumInput" fx:id="rightAutriumInput" label="%general-right-autrium" maxWidth="-Infinity" />
+    <TextInput id="ascendingAortaInput" fx:id="ascendingAortaInput" label="%general-ascending-aorta" maxWidth="-Infinity" />
+    <TextInput id="pulmonaryTrunkInput" fx:id="pulmonaryTrunkInput" label="%general-pulmonary-trunk" maxWidth="-Infinity" />
+    <TextInput id="efInput" fx:id="efInput" label="%general-ef" maxWidth="-Infinity" />
+    <TextInput id="eaInput" fx:id="eaInput" label="%general-ea" maxWidth="-Infinity" />
+    <TextInput id="dtInput" fx:id="dtInput" label="%general-dt" maxWidth="-Infinity" />
+    <CollapsibleInput id="pericardiumCollapsibleInput" maxWidth="-Infinity">
+        <mainInputs>
+            <ComboBoxInput id="pericariumInput" fx:id="pericardiumInput" label="%general-pericardium" maxWidth="-Infinity"/>
+        </mainInputs>
+        <secondaryInputs>
+            <TextInput id="pericariumFluidInput" fx:id="pericardiumFluidInput" label="%general-pericardium-amount" maxWidth="-Infinity"/>
+        </secondaryInputs>
+    </CollapsibleInput>
+</VBox>

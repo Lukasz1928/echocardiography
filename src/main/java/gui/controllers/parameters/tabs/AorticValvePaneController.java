@@ -1,100 +1,50 @@
 package gui.controllers.parameters.tabs;
 
-import gui.utils.latex_renderer.FormatException;
-import gui.utils.latex_renderer.LatexRenderer;
+import gui.custom.input.composite.ValveTypeInput;
+import gui.custom.input.simple.ComboBoxInput;
+import gui.custom.input.simple.TextInput;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.RadioButton;
-
-import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
-import java.util.ResourceBundle;
 
 public class AorticValvePaneController {
 
-    private ResourceBundle labelsResourceBundle;
-
-    public AorticValvePaneController(ResourceBundle resourceBundle) {
-        this.labelsResourceBundle = resourceBundle;
-    }
-
-    public AorticValvePaneController() {
-        this.labelsResourceBundle = ResourceBundle.getBundle("gui.text.guiLabels");
-    }
-
-    /* labels */
     @FXML
-    private ImageView aorticLeafletsLabel;
+    private ValveTypeInput valveTypeInput;
     @FXML
-    private ImageView aorticRegurgiationLabel;
+    private ComboBoxInput leafletsInput;
     @FXML
-    private ImageView aorticGradientLabel;
+    private ComboBoxInput regurgiationInput;
     @FXML
-    private ImageView aorticVcLabel;
+    private TextInput gradientInput;
     @FXML
-    private ImageView aorticIalvotLabel;
+    private TextInput vcInput;
     @FXML
-    private ImageView aorticPhtLabel;
+    private TextInput ialvotInput;
     @FXML
-    private ImageView aorticRpisaLabel;
+    private TextInput phtInput;
     @FXML
-    private ImageView aorticAvaLabel;
+    private TextInput rpisaInput;
     @FXML
-    private ImageView aorticVmaxLabel;
+    private TextInput avaInput;
     @FXML
-    private ImageView aorticDviDviLabel;
-
-    /* input fields */
+    private TextInput vmaxInput;
     @FXML
-    private RadioButton aorticTypeNativeInput;
+    private TextInput dviDviInput;
     @FXML
-    private RadioButton aorticTypeBiologicalInput;
+    private TextInput dviVtiprInput;
     @FXML
-    private RadioButton aorticTypeArtificialInput;
+    private TextInput dviVtilvotInput;
     @FXML
-    private ComboBox aorticLeafletsInput;
+    private TextInput eoaEoaInput;
     @FXML
-    private ComboBox aorticRegurgiationInput;
+    private TextInput eoaVtiprInput;
     @FXML
-    private TextField aorticGradientInput;
+    private TextInput eoaVtilvotInput;
     @FXML
-    private TextField aorticVcInput;
+    private TextInput eoaCsalvotInput;
     @FXML
-    private TextField aorticIalvotInput;
-    @FXML
-    private TextField aorticPhtInput;
-    @FXML
-    private TextField aorticRpisaInput;
-    @FXML
-    private TextField aorticAvaInput;
-    @FXML
-    private TextField aorticVmaxInput;
+    private TextInput atInput;
 
     public void initialize() {
-        setupLabels();
-    }
 
-    private void setupLabels() {
-
-        LatexRenderer lr = new LatexRenderer();
-
-        // TODO: Setup radio buttons labels
-        try {
-            this.aorticLeafletsLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("aortic-leaflets")));
-            this.aorticRegurgiationLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("aortic-regurgiation")));
-            this.aorticGradientLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("aortic-gradient")));
-            this.aorticVcLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("aortic-vc")));
-            this.aorticIalvotLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("aortic-ialvot")));
-            this.aorticPhtLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("aortic-pht")));
-            this.aorticRpisaLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("aortic-rpisa")));
-            this.aorticAvaLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("aortic-ava")));
-            this.aorticVmaxLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("aortic-vmax")));
-            this.aorticGradientLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("aortic-gradient")));
-            this.aorticDviDviLabel.setImage(lr.latexToImage(this.labelsResourceBundle.getString("aortic-dvi")));
-        }
-        catch(FormatException e) {
-            System.out.println("dupa");
-            // TODO
-        }
     }
 }

@@ -1,39 +1,22 @@
 package gui.controllers.parameters.tabs;
 
+import gui.custom.input.composite.ValveTypeInput;
+import gui.custom.input.simple.ComboBoxInput;
+import gui.custom.input.simple.TextInput;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 
 public class PulmonaryValvePaneController {
 
-    /*labels */
     @FXML
-    private ImageView pulmonaryLeafletsLabel;
+    private ValveTypeInput valveTypeInput;
     @FXML
-    private ImageView pulmonaryRegurgiationLabel;
+    private ComboBoxInput leafletsInput;
     @FXML
-    private ImageView pulmonaryGradientLabel;
+    private ComboBoxInput regurgiationInput;
     @FXML
-    private ImageView pulmonaryActLabel;
-    // TODO: add radio button labels
-
-    /* inputs */
+    private TextInput gradientInput;
     @FXML
-    private RadioButton pulmonaryTypeNativeInput;
-    @FXML
-    private RadioButton pulmonaryTypeBiologicalInput;
-    @FXML
-    private RadioButton pulmonaryTypeArtificialInput;
-    @FXML
-    private ComboBox pulmonaryLeafletsInput;
-    @FXML
-    private ComboBox pulmonaryRegurgiationInput;
-    @FXML
-    private TextField pulmonaryGradientInput;
-    @FXML
-    private TextField pulmonaryActInput;
+    private TextInput actInput;
 
     public void initialize() {
 
