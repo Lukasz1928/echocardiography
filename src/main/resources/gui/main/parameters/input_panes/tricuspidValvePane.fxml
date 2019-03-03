@@ -16,6 +16,5 @@
     <TextInput id="tricuspidGradientInput" fx:id="gradientInput" label="%tricuspid-gradient" maxWidth="-Infinity"/>
     <TextInput id="tricuspidRvspInput" fx:id="rvspInput" label="%tricuspid-rvsp" maxWidth="-Infinity"/>
     <TextInput id="tricuspidIvcInput" fx:id="ivcInput" label="%tricuspid-ivc" maxWidth="-Infinity"/>
-    <TextInput id="tricuspidTapseInput" fx:id="tapseInput" label="%tricuspid-tapse" maxWidth="-Infinity"/>
     <TextInput id="tricuspidVcInput" fx:id="vcInput" label="%tricuspid-vc" maxWidth="-Infinity"/>
 </VBox>

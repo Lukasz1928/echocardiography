@@ -20,8 +20,6 @@ public class TricuspidValvePaneController {
     @FXML
     private TextInput ivcInput;
     @FXML
-    private TextInput tapseInput;
-    @FXML
     private TextInput vcInput;
 
     public void initialize() {

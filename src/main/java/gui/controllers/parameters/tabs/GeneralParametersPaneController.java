@@ -24,7 +24,13 @@ public class GeneralParametersPaneController {
     @FXML
     private TextInput pulmonaryTrunkInput;
     @FXML
+    private TextInput bulbInput;
+    @FXML
     private TextInput efInput;
+    @FXML
+    private TextInput mapseInput;
+    @FXML
+    private TextInput tapseInput;
     @FXML
     private TextInput eaInput;
     @FXML
