@@ -1,16 +1,12 @@
 package gui.custom.input.composite;
 
-import javafx.beans.DefaultProperty;
 import javafx.collections.ObservableList;
 import javafx.embed.swing.SwingFXUtils;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -41,22 +37,30 @@ public class CollapsibleInput extends VBox {
         }
         loadImages();
         setupToggleHandler();
-        this.secondaryInputArea.setVisible(false);
-        this.toggleSecondary.setImage(this.showImage);
+        hideSecondary();
+        setupStyle();
     }
 
     private void setupToggleHandler() {
         this.toggleSecondary.setOnMouseReleased(event -> {
             this.isShown = !this.isShown;
-            this.secondaryInputArea.setVisible(this.isShown);
-            this.secondaryInputArea.setDisable(this.isShown);
             if(this.isShown) {
-                this.toggleSecondary.setImage(this.hideImage);
+                showSecondary();
             }
             else {
-                this.toggleSecondary.setImage(this.showImage);
+                hideSecondary();
             }
         });
+    }
+
+    private void showSecondary() {
+        this.toggleSecondary.setImage(this.hideImage);
+        this.getChildren().add(this.secondaryInputArea);
+    }
+
+    private void hideSecondary() {
+        this.toggleSecondary.setImage(this.showImage);
+        this.getChildren().remove(this.secondaryInputArea);
     }
 
     private void loadImages() {
@@ -73,6 +77,23 @@ public class CollapsibleInput extends VBox {
         }
         catch(IOException e) {
             System.out.println("dupa222");
+        }
+    }
+
+    private void setupStyle() {
+        String cssLayout = "-fx-border-color: gray;\n" +
+                "-fx-border-width: 1;\n" +
+                "-fx-border-style: dashed;\n";
+        this.setStyle(cssLayout);
+    }
+
+    public void setSecondaryVisible(boolean visible) {
+        this.isShown = visible;
+        if(visible) {
+            this.showSecondary();
+        }
+        else {
+            this.hideSecondary();
         }
     }
 

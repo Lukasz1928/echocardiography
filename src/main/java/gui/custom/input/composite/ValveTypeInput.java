@@ -21,19 +21,16 @@ public class ValveTypeInput extends AnchorPane {
     private ToggleGroup toggleGroup;
 
     public ValveTypeInput() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/custom/input/compound/ValveTypeInput.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/gui/custom/input/composite/ValveTypeInput.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {
             fxmlLoader.load();
-        } catch(IOException exception) {
+        }
+        catch(IOException exception) {
             throw new RuntimeException(exception);
         }
-        // TODO: update css (much) later
-        String cssLayout = "-fx-border-color: gray;\n" +
-                "-fx-border-width: 1;\n" +
-                "-fx-border-style: dashed;\n";
-        this.setStyle(cssLayout);
+        setupStyle();
         setupToggleGroup();
         setupDefaultValues();
     }
@@ -43,6 +40,13 @@ public class ValveTypeInput extends AnchorPane {
         this.nativeInput.setToggleGroup(this.toggleGroup);
         this.artificialInput.setToggleGroup(this.toggleGroup);
         this.biologicalInput.setToggleGroup(this.toggleGroup);
+    }
+
+    private void setupStyle() {
+        String cssLayout = "-fx-border-color: gray;\n" +
+                "-fx-border-width: 1;\n" +
+                "-fx-border-style: dashed;\n";
+        this.setStyle(cssLayout);
     }
 
     private void setupDefaultValues() {
