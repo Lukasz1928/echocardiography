@@ -26,7 +26,7 @@
             <ComboBoxInput id="pericariumInput" fx:id="pericardiumInput" label="%general-pericardium" maxWidth="-Infinity"/>
         </mainInputs>
         <secondaryInputs>
-            <TextInput id="pericariumFluidInput" fx:id="pericardiumFluidInput" label="%general-pericardium-amount" maxWidth="-Infinity"/>
+            <TextInput id="pericariumFluidInput" fx:id="pericardiumFluidInput" label="%general-pericardium-fluid" maxWidth="-Infinity"/>
         </secondaryInputs>
     </CollapsibleInput>
 </VBox>
