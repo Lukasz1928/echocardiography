@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import gui.custom.control.TabWithLabel?>
+
+<AnchorPane id="parametersPane" prefWidth="750.0" prefHeight="750" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.parameters.ParametersController">
+    <TabPane id="parametersTabPane" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" style="FxBackgroundColor: gray;" tabClosingPolicy="UNAVAILABLE">
+        <TabWithLabel id="parametersGeneralTab" fx:id="parametersGeneralTab" label="%general-tab">
+            <content> <!-- that tag IS required for some reason! -->
+                <fx:include source="input_panes/generalParametersPane.fxml" fx:id="parametersGeneralPane"/>
+            </content>
+        </TabWithLabel>
+        <TabWithLabel id="parametersMitralValveTab" fx:id="parametersMitralValveTab" label="%mitral-tab">
+            <content>
+                <fx:include source="input_panes/mitralValvePane.fxml" fx:id="parametersMitralValvePane"/>
+            </content>
+        </TabWithLabel>
+        <TabWithLabel id="parametersAorticValveTab" fx:id="parametersAorticValveTab" label="%aortic-tab">
+            <content>
+                <fx:include source="input_panes/aorticValvePane.fxml" fx:id="parametersAorticValvePane"/>
+            </content>
+        </TabWithLabel>
+        <TabWithLabel id="parametersTricuspidValveTab" fx:id="parametersTricuspidValveTab" label="%tricuspid-tab">
+            <content>
+                <fx:include source="input_panes/tricuspidValvePane.fxml" fx:id="parametersTricuspidValvePane"/>
+            </content>
+        </TabWithLabel>
+        <TabWithLabel id="parametersPulmonaryValveTab" fx:id="parametersPulmonaryValveTab" label="%pulmonary-tab">
+            <content>
+                <fx:include source="input_panes/pulmonaryValvePane.fxml" fx:id="parametersPulmonaryValvePane"/>
+            </content>
+        </TabWithLabel>
+    </TabPane>
+</AnchorPane>

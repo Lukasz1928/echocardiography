@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import gui.custom.labels.LatexLabel?>
+
+<fx:root type="javafx.scene.layout.HBox" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" spacing="10">
+    <LatexLabel fx:id="label"/>
+    <ComboBox fx:id="input"/>
+</fx:root>

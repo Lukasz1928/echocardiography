@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import gui.custom.input.composite.ValveTypeInput?>
+<?import gui.custom.input.simple.ComboBoxInput?>
+<?import gui.custom.input.simple.TextInput?>
+
+<VBox id="parametersTricuspidTab" spacing="5" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="gui.controllers.parameters.tabs.TricuspidValvePaneController">
+    <padding>
+        <Insets left="10.0" top="5.0" />
+    </padding>
+    <ValveTypeInput id="tricuspidValveTypeInput" fx:id="valveTypeInput" maxWidth="-Infinity"/>
+    <ComboBoxInput id="tricuspidLeafletsInput" fx:id="leafletsInput" label="%tricuspid-leaflets" maxWidth="-Infinity"/>
+    <ComboBoxInput id="tricuspidRegurgiationInput" fx:id="regurgiationInput" label="%tricuspid-regurgiation" maxWidth="-Infinity"/>
+    <TextInput id="tricuspidGradientInput" fx:id="gradientInput" label="%tricuspid-gradient" maxWidth="-Infinity"/>
+    <TextInput id="tricuspidRvspInput" fx:id="rvspInput" label="%tricuspid-rvsp" maxWidth="-Infinity"/>
+    <TextInput id="tricuspidIvcInput" fx:id="ivcInput" label="%tricuspid-ivc" maxWidth="-Infinity"/>
+    <TextInput id="tricuspidVcInput" fx:id="vcInput" label="%tricuspid-vc" maxWidth="-Infinity"/>
+</VBox>

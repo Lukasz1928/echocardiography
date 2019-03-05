@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import gui.custom.input.composite.ValveTypeInput?>
+<?import gui.custom.input.simple.ComboBoxInput?>
+<?import gui.custom.input.simple.TextInput?>
+<?import javafx.geometry.Insets?>
+
+<VBox id="parametersPulmonaryPane" spacing="5" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.parameters.tabs.PulmonaryValvePaneController">
+    <padding>
+        <Insets left="10.0" top="5.0" />
+    </padding>
+    <ValveTypeInput id="pulmonaryValveTypeInput" fx:id="valveTypeInput" maxWidth="-Infinity"/>
+    <ComboBoxInput id="pulmonaryLeafletsInput" fx:id="leafletsInput" label="%pulmonary-leaflets" maxWidth="-Infinity"/>
+    <ComboBoxInput id="pulmonaryRegurgiationInput" fx:id="regurgiationInput" label="%pulmonary-regurgiation" maxWidth="-Infinity"/>
+    <TextInput id="pulmonaryGradientInput" fx:id="gradientInput" label="%pulmonary-gradient" maxWidth="-Infinity"/>
+    <TextInput id="pulmonaryActInput" fx:id="actInput" label="%pulmonary-act" maxWidth="-Infinity"/>
+</VBox>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import gui.custom.input.composite.ValveTypeInput?>
+<?import gui.custom.input.simple.ComboBoxInput?>
+<?import gui.custom.input.simple.TextInput?>
+<?import gui.custom.input.composite.CollapsibleInput?>
+
+<VBox id="parametersAorticPane" spacing="5" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="gui.controllers.parameters.tabs.AorticValvePaneController">
+    <padding>
+        <Insets left="10.0" top="5.0" />
+    </padding>
+    <ValveTypeInput id="aorticValveTypeInput" fx:id="valveTypeInput" maxWidth="-Infinity"/>
+    <ComboBoxInput id="aorticLeafletsInput" fx:id="leafletsInput" label="%aortic-leaflets" maxWidth="-Infinity"/>
+    <ComboBoxInput id="aorticRegurgiationInput" fx:id="regurgiationInput" label="%aortic-regurgiation" maxWidth="-Infinity"/>
+    <TextInput id="aorticGradientInput" fx:id="gradientInput" label="%aortic-gradient" maxWidth="-Infinity"/>
+    <TextInput id="aorticVcInput" fx:id="vcInput" label="%aortic-vc" maxWidth="-Infinity"/>
+    <TextInput id="aorticIalvotInput" fx:id="ialvotInput" label="%aortic-ialvot" maxWidth="-Infinity"/>
+    <TextInput id="aorticPhtInput" fx:id="phtInput" label="%aortic-pht" maxWidth="-Infinity"/>
+    <TextInput id="aorticRpisaInput" fx:id="rpisaInput" label="%aortic-rpisa" maxWidth="-Infinity"/>
+    <TextInput id="aorticAvaInput" fx:id="avaInput" label="%aortic-ava" maxWidth="-Infinity"/>
+    <TextInput id="aorticVmaxInput" fx:id="vmaxInput" label="%aortic-vmax" maxWidth="-Infinity"/>
+    <CollapsibleInput id="aorticDviCollapsibleInput" maxWidth="-Infinity">
+        <mainInputs>
+            <TextInput id="aorticDviDviInput" fx:id="dviDviInput" label="%aortic-dvi" maxWidth="-Infinity"/>
+        </mainInputs>
+        <secondaryInputs>
+            <TextInput id="aorticDviVmaxlvotInput" fx:id="dviVtiprInput" label="%aortic-vmaxlvot" maxWidth="-Infinity"/>
+            <TextInput id="aorticDviVmaxprInput" fx:id="dviVtilvotInput" label="%aortic-vmaxpr" maxWidth="-Infinity"/>
+        </secondaryInputs>
+    </CollapsibleInput>
+    <CollapsibleInput id="aorticEoaCollapsibleInput" maxWidth="-Infinity">
+        <mainInputs>
+            <TextInput id="aorticEoaEoaInput" fx:id="eoaEoaInput" label="%aortic-eoa" maxWidth="-Infinity"/>
+        </mainInputs>
+        <secondaryInputs>
+            <TextInput id="aorticEoaCsalvotInput" fx:id="eoaVtiprInput" label="%aortic-csalvot" maxWidth="-Infinity"/>
+            <TextInput id="aorticEoaVtilvotInput" fx:id="eoaVtilvotInput" label="%aortic-vtilvot" maxWidth="-Infinity"/>
+            <TextInput id="aorticEoaCsaprInput" fx:id="eoaCsalvotInput" label="%aortic-csapr" maxWidth="-Infinity"/>
+        </secondaryInputs>
+    </CollapsibleInput>
+    <TextInput id="aorticAtInput" fx:id="atInput" label="%aortic-at" maxWidth="-Infinity"/>
+</VBox>

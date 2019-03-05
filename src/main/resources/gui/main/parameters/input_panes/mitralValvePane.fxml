@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import gui.custom.input.composite.ValveTypeInput?>
+<?import javafx.geometry.Insets?>
+<?import gui.custom.input.simple.ComboBoxInput?>
+<?import gui.custom.input.simple.TextInput?>
+<?import gui.custom.input.composite.CollapsibleInput?>
+
+<VBox id="parametersMitralPane" spacing="5" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="gui.controllers.parameters.tabs.MitralValvePaneController">
+    <padding>
+        <Insets left="10.0" top="5.0" />
+    </padding>
+    <ValveTypeInput id="mitralValveTypeInput" fx:id="valveTypeInput" maxWidth="-Infinity"/>
+    <ComboBoxInput id="mitralLeafletsInput" fx:id="leafletsInput" label="%mitral-leaflets" maxWidth="-Infinity"/>
+    <ComboBoxInput id="mitralRegurgiationInput" fx:id="regurgiationInput" label="%mitral-regurgiation" maxWidth="-Infinity"/>
+    <TextInput id="mitralGradientInput" fx:id="gradientInput" label="%mitral-gradient" maxWidth="-Infinity"/>
+    <TextInput id="mitralVcInput" fx:id="vcInput" label="%mitral-vc" maxWidth="-Infinity"/>
+    <TextInput id="mitralRpisaInput" fx:id="rpisaInput" label="%mitral-rpisa" maxWidth="-Infinity"/>
+    <TextInput id="mitralEroInput" fx:id="eroInput" label="%mitral-ero" maxWidth="-Infinity"/>
+    <CollapsibleInput id="mitralDviCollapsibleInput" maxWidth="-Infinity">
+        <mainInputs>
+            <TextInput id="mitralDviDviInput" fx:id="dviDviInput" label="%mitral-dvi" maxWidth="-Infinity"/>
+        </mainInputs>
+        <secondaryInputs>
+            <TextInput id="mitralDviVtiprInput" fx:id="dviVtiprInput" label="%mitral-vtipr" maxWidth="-Infinity"/>
+            <TextInput id="mitralDviVtilvotInput" fx:id="dviVtilvotInput" label="%mitral-vtilvot" maxWidth="-Infinity"/>
+        </secondaryInputs>
+    </CollapsibleInput>
+    <CollapsibleInput id="mitralEoaCollapsibleInput" maxWidth="-Infinity">
+        <mainInputs>
+            <TextInput id="mitralEoaEoaInput" fx:id="eoaEoaInput" label="%mitral-eoa" maxWidth="-Infinity"/>
+        </mainInputs>
+        <secondaryInputs>
+            <TextInput id="mitralEoaVtiprInput" fx:id="eoaVtiprInput" label="%mitral-vtipr" maxWidth="-Infinity"/>
+            <TextInput id="mitralEoaVtilvotInput" fx:id="eoaVtilvotInput" label="%mitral-vtilvot" maxWidth="-Infinity"/>
+            <TextInput id="mitralEoaCsalvotInput" fx:id="eoaCsalvotInput" label="%mitral-csalvot" maxWidth="-Infinity"/>
+        </secondaryInputs>
+    </CollapsibleInput>
+    <TextInput id="mitralPhtInput" fx:id="phtInput" label="%mitral-pht" maxWidth="-Infinity"/>
+    <TextInput id="mitralVmaxInput" fx:id="vmaxInput" label="%mitral-vmax" maxWidth="-Infinity"/>
+    <TextInput id="mitralMvaInput" fx:id="mvaInput" label="%mitral-mva" maxWidth="-Infinity"/>
+</VBox>
