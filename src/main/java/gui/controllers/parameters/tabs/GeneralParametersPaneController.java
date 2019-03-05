@@ -26,6 +26,10 @@ public class GeneralParametersPaneController {
     @FXML
     private TextInput bulbInput;
     @FXML
+    public TextInput stjInput;
+    @FXML
+    public TextInput contractilityInput;
+    @FXML
     private TextInput efInput;
     @FXML
     private TextInput mapseInput;

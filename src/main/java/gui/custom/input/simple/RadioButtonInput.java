@@ -34,7 +34,6 @@ public class RadioButtonInput extends HBox {
             throw new RuntimeException(exception);
         }
         setupStyle();
-        // TODO: move button to middle of input
     }
 
     public RadioButtonInput(@NamedArg("label") String label) {

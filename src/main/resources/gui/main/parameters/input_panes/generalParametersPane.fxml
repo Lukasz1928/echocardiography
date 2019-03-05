@@ -17,10 +17,10 @@
     <TextInput id="leftAutriumInput" fx:id="leftAutriumInput" label="%general-left-autrium" maxWidth="-Infinity"/>
     <TextInput id="rightAutriumInput" fx:id="rightAutriumInput" label="%general-right-autrium" maxWidth="-Infinity"/>
     <TextInput id="ascendingAortaInput" fx:id="ascendingAortaInput" label="%general-ascending-aorta" maxWidth="-Infinity"/>
-    <TextInput id="pulmonaryTrunkInput" fx:id="pulmonaryTrunkInput" label="%general-pulmonary-trunk" maxWidth="-Infinity"/>
     <TextInput id="bulbInput" fx:id="bulbInput" label="%general-bulb" maxWidth="-Infinity"/>
-    <!-- STJ -->
-    <!-- kurczliwosc -->
+    <TextInput id ="stjInput" fx:id="stjInput" label="%general-stj" maxWidth="-Infinity"/>
+    <TextInput id="pulmonaryTrunkInput" fx:id="pulmonaryTrunkInput" label="%general-pulmonary-trunk" maxWidth="-Infinity"/>
+    <TextInput id="contractilityInput" fx:id="contractilityInput" label="%general-contractility" maxWidth="-Infinity"/>
     <TextInput id="efInput" fx:id="efInput" label="%general-ef" maxWidth="-Infinity"/>
     <TextInput id="mapseInput" fx:id="mapseInput" label="%general-mapse" maxWidth="-Infinity"/>
     <TextInput id="tapseInput" fx:id="tapseInput" label="%general-tapse" maxWidth="-Infinity"/>
@@ -28,10 +28,10 @@
     <TextInput id="dtInput" fx:id="dtInput" label="%general-dt" maxWidth="-Infinity"/>
     <CollapsibleInput id="pericardiumCollapsibleInput" maxWidth="-Infinity">
         <mainInputs>
-            <ComboBoxInput id="pericariumInput" fx:id="pericardiumInput" label="%general-pericardium" maxWidth="-Infinity"/>
+            <ComboBoxInput id="pericardiumInput" fx:id="pericardiumInput" label="%general-pericardium" maxWidth="-Infinity"/>
         </mainInputs>
         <secondaryInputs>
-            <TextInput id="pericariumFluidInput" fx:id="pericardiumFluidInput" label="%general-pericardium-fluid" maxWidth="-Infinity"/>
+            <TextInput id="pericardiumFluidInput" fx:id="pericardiumFluidInput" label="%general-pericardium-fluid" maxWidth="-Infinity"/>
         </secondaryInputs>
     </CollapsibleInput>
 </VBox>
