@@ -1,11 +1,13 @@
 package gui.controllers.parameters.tabs;
 
+import gui.controllers.parameters.ControllerWithParameters;
 import gui.custom.input.simple.ComboBoxInput;
 import gui.custom.input.simple.TextInput;
+import data.heart.components.HeartParameters;
 import javafx.fxml.FXML;
 
 
-public class GeneralParametersPaneController {
+public class GeneralParametersPaneController implements ControllerWithParameters<HeartParameters> {
 
     @FXML
     private TextInput leftVentricleInput;
@@ -46,5 +48,10 @@ public class GeneralParametersPaneController {
 
     public void initialize() {
 
+    }
+
+    @Override
+    public HeartParameters getParameters() {
+        return null;
     }
 }
