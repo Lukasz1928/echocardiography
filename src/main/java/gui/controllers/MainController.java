@@ -9,6 +9,9 @@ import javafx.fxml.FXML;
 
 public class MainController {
 
+    private Heart heart;
+    private BasicExaminationData basicData;
+
     @FXML
     private ParametersController parametersPaneController;
     @FXML

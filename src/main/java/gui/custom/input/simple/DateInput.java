@@ -54,6 +54,10 @@ public class DateInput extends HBox {
         this.input.setValue(date);
     }
 
+    public LocalDate getValue() {
+        return this.input.getValue();
+    }
+
     private void setupLabel(String label) {
         this.label.setText(label);
     }
